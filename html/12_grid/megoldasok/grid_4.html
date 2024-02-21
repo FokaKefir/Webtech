@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>Grid példa</title>
+    <meta charset="utf-8">
+
+    <style type="text/css">
+        /* kiinduló CSS a grid feladathoz */
+        body {
+            margin: 0px; padding: 0px; 
+        
+        }
+        p {
+            padding: 2px; margin: 4px;
+            font-size: smaller;
+        }
+
+
+        #container {
+            display: grid;
+            grid-template-columns: 8em 8em 8em 8em;
+            grid-template-rows: 8em 8em 8em 8em;
+            grid-gap: 0.2em;
+        }
+
+        .gitem {
+            background-color: lightgray;
+            padding: 0.5em;
+            border: 1px solid red;
+            overflow: scroll;
+        }
+
+        .item1 {
+            grid-row: 1 / 3;
+            grid-column: 1; 
+        }
+        .item2 {
+            grid-row: 1 / 3;
+            grid-column: 2 / 4; 
+        }
+
+        .item3 {
+            grid-row: 1 / 3;
+            grid-column: 4; 
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="container">
+        <div class="gitem item1">
+            <p>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis semper ex, nec commodo sapien. Praesent nec massa at ligula tempor viverra ut id dolor. Nunc quis semper ex, nec commodo sapien. Praesent nec massa at ligula tempor viverra ut id dolor. Suspendisse pulvinar lacinia iaculis. Donec sapien quam, hendrerit sed velit a, tincidunt finibus ligula. Nunc nec tempus lorem, vitae dapibus ipsum. Etiam vitae lectus a lorem volutpat mollis nec sed ligula.</p>
+        </div>
+        <div class="gitem item2">
+            <p>2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis semper ex, nec commodo sapien. Praesent nec massa at ligula tempor viverra ut id dolor. Nunc quis semper ex, nec commodo sapien. Praesent nec massa at ligula tempor viverra ut id dolor. Suspendisse pulvinar lacinia iaculis. Donec sapien quam, hendrerit sed velit a, tincidunt finibus ligula. Nunc nec tempus lorem, vitae dapibus ipsum. Etiam vitae lectus a lorem volutpat mollis nec sed ligula.</p>
+        </div>
+        <div class="gitem item3">
+            <p>3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis semper ex, nec commodo sapien. Praesent nec massa at ligula tempor viverra ut id dolor. Nunc quis semper ex, nec commodo sapien. Praesent nec massa at ligula tempor viverra ut id dolor. Suspendisse pulvinar lacinia iaculis. Donec sapien quam, hendrerit sed velit a, tincidunt finibus ligula. Nunc nec tempus lorem, vitae dapibus ipsum. Etiam vitae lectus a lorem volutpat mollis nec sed ligula.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

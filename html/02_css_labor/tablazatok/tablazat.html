@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="hu"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>
+            Táblázat: rowspan, colspan
+        </title>
+    </head>
+    <body>
+        <table border="1">
+            <caption>
+                Vizsgaeredmények
+            </caption>
+            <tbody><tr>
+                <th scope="col">
+                    Jegyek
+                </th>
+                <th scope="col">
+                    Jelenlét
+                </th>
+                <th scope="col">
+                    Labor
+                </th>
+                <th scope="col">
+                    Házi
+                </th>
+                <th scope="col">
+                    Terv
+                </th>
+                <th scope="col">
+                    Vég
+                </th>
+            </tr>
+            <tr>
+                <th scope="row">
+                    diák1
+                </th>
+                <td>
+                    6
+                </td>
+                <td>
+                    6
+                </td>
+                <td>
+                    3
+                </td>
+                <td>
+                    7
+                </td>
+                <td>
+                    5.5
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    diák2
+                </th>
+                <td>
+                    8
+                </td>
+                <td>
+                    8
+                </td>
+                <td>
+                    3
+                </td>
+                <td>
+                    7
+                </td>
+                <td>
+                    6.5
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    diák3
+                </th>
+                <td>
+                    8
+                </td>
+                <td>
+                    6
+                </td>
+                <td>
+                    1
+                </td>
+                <td>
+                    7
+                </td>
+                <td>
+                    5.5
+                </td>
+            </tr>
+        </tbody></table>
+        <p>
+            Oszlopok összevonása: colspan
+        </p>
+        <table>
+            <caption>
+                Vizsgaeredmények
+            </caption>
+            <tbody><tr>
+                <th scope="col">
+                    Jegyek
+                </th>
+                <th scope="col">
+                    Jelenlét
+                </th>
+                <th scope="col">
+                    Labor
+                </th>
+                <th scope="col">
+                    Házi
+                </th>
+                <th scope="col">
+                    Terv
+                </th>
+                <th scope="col">
+                    Vég
+                </th>
+            </tr>
+            <tr>
+                <th scope="row">
+                    diák1
+                </th>
+                <td colspan="2">
+                    6
+                </td>
+                <td>
+                    3
+                </td>
+                <td>
+                    7
+                </td>
+                <td>
+                    5.5
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    diák2
+                </th>
+                <td>
+                    8
+                </td>
+                <td>
+                    8
+                </td>
+                <td>
+                    3
+                </td>
+                <td>
+                    7
+                </td>
+                <td>
+                    6.5
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    diák3
+                </th>
+                <td>
+                    8
+                </td>
+                <td>
+                    6
+                </td>
+                <td>
+                    1
+                </td>
+                <td>
+                    7
+                </td>
+                <td>
+                    5.5
+                </td>
+            </tr>
+        </tbody></table>
+        <p>
+            Sorok összevonása: rowspan
+        </p>
+        <table>
+            <caption>
+                Vizsgaeredmények
+            </caption>
+            <tbody><tr>
+                <th scope="col">
+                    Jegyek
+                </th>
+                <th scope="col">
+                    Jelenlét
+                </th>
+                <th scope="col">
+                    Labor
+                </th>
+                <th scope="col">
+                    Házi
+                </th>
+                <th scope="col">
+                    Terv
+                </th>
+                <th scope="col">
+                    Vég
+                </th>
+            </tr>
+            <tr>
+                <th scope="row">
+                    diák1
+                </th>
+                <td rowspan="2">
+                    6
+                </td>
+                <td>
+                    6
+                </td>
+                <td>
+                    3
+                </td>
+                <td>
+                    7
+                </td>
+                <td>
+                    5.5
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    diák2
+                </th>
+                <td>
+                    8
+                </td>
+                <td>
+                    3
+                </td>
+                <td>
+                    7
+                </td>
+                <td>
+                    6.5
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    diák3
+                </th>
+                <td>
+                    8
+                </td>
+                <td>
+                    6
+                </td>
+                <td>
+                    1
+                </td>
+                <td>
+                    7
+                </td>
+                <td>
+                    5.5
+                </td>
+            </tr>
+        </tbody></table>
+    
+
+</body></html>

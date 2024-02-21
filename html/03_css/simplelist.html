@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            HTML elemek
+        </title>
+        <style type="text/css">
+        #test {
+        list-style-type: disc;/* circle, square, ... */ 
+        /*list-style-image: url("icon.gif");*/
+        /*list-style-position:inside; */
+        /* list-style-type: none; */ 
+        }
+         
+        /* az elem css tulajdonságainál ha sorra kivesszük a
+          megjegyzéseket a listát vízszintes tárolóvűalakítjuk */       
+        .elem {
+        font-family: sans-serif;
+        /* display: inline; */
+        /* float: left; */
+        /*  margin: 3px; background: yellow; */
+        /* padding: 3px;*/ 
+        }
+
+        .elem1 {
+        font-family: sans-serif;
+        }
+
+        #test1 {
+        list-style-type: hebrew; /* none, decimal, lower-roman, ... */
+         /* clear: left; */
+        }
+        li { background: lightgray ;
+        /*    list-style-position:inside;*/
+        /* ezt kiválasztva, a marker a tartalmi részre kerül */
+        }
+        </style>
+    </head>
+    <body style="font-size: x-large;">
+        <ul id="test">
+            <li class="elem">első
+            </li>
+            <li class="elem">második
+            </li>
+            <li class="elem">harmadik
+            </li>
+            <li class="elem">negyedik
+            </li>
+        </ul>
+        <ol id="test1">
+            <li class="elem1">
+                <bdo dir="rtl">első</bdo>
+            </li>
+            <li class="elem1">
+                <bdo dir="rtl">második</bdo>
+            </li>
+            <li class="elem1">
+                <bdo dir="rtl">harmadik</bdo>
+            </li>
+            <li class="elem1">
+                <bdo dir="rtl">negyedik</bdo>
+            </li>
+        </ol>
+    </body>
+</html>

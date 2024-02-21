@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FlexBox példa - példa a wrap tulajdonság használatára</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        body {
+            margin: 0px; padding: 0px; 
+        }
+        p {
+            padding: 2px;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            
+            border: 2px solid black;
+            width: 500px;
+        }
+
+        /* egy flex elem */
+        .item {
+            border: 2px solid red;
+            box-sizing: border-box;
+            padding: 0.2em;
+            flex: 1 1 220px; /* 2 elem egy sorban */
+            margin: 10px;
+        }
+
+        .three {
+            flex: 1 1 140px; /* így 3 elem kerülhet egy sorba */
+        }
+
+        /* mivel a .item esetében a növekedés 1, az utolsó elem teljes sort foglal le */
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">
+            <p>1. Vivamus id elit id lacus lobortis consectetur malesuada quis enim.</p>
+        </div>
+        <div class="item">
+            <p>2. Vivamus id elit id lacus lobortis consectetur malesuada quis enim.</p>
+        </div>
+        <div class="item">
+            <p>3. Vivamus id elit id lacus lobortis consectetur malesuada quis enim.</p>
+        </div>
+        <div class="item">
+            <p>4. Vivamus id elit id lacus lobortis consectetur malesuada quis enim.</p>
+        </div>
+        <div class="item three">
+            <p>5. Vivamus id elit id lacus lobortis consectetur malesuada quis enim.</p>
+        </div>
+        <div class="item three">
+            <p>6. Vivamus id elit id lacus lobortis consectetur malesuada quis enim.</p>
+        </div>
+        <div class="item three">
+            <p>7. Vivamus id elit id lacus lobortis consectetur malesuada quis enim.</p>
+        </div>
+        <div class="item">
+            <p>8. Vivamus id elit id lacus lobortis consectetur malesuada quis enim.</p>
+        </div>
+    </div>
+</body>
+
+</html>

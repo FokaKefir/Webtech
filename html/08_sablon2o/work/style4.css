@@ -1,0 +1,84 @@
+html, body {
+    margin: 0px; padding: 0px;
+}
+
+p {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 12pt;
+    text-indent: 3em;
+}
+
+h1 {
+     font-family: Arial, sans-serif;
+     font-size: 25pt;
+     text-align: center;
+     border-bottom: 2px dotted forestgreen;
+     margin: 0.5em;
+     width: 13em;
+     margin-right: 0.5em;
+     margin-left: auto;
+}
+
+h1 + p:first-letter { font-size: 20pt ;
+                        color: tomato;
+                       font-weight: bold;
+    }
+
+h2 {
+    font-family: Arial, Helvetica,  sans-serif;
+    font-size: 24px;
+    margin: 2px; 
+    color: lavender;
+    }
+
+
+#tarto {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: tomato;
+}
+
+#fejlec {
+    height: 200px;
+    background-color: forestgreen;
+/*
+    background-image: url("/~lszabo/nyiltnap/fejlec_hatter.jpg");
+*/
+}
+
+#lablec {
+    height: 30px;
+    clear: both;
+    background-color: forestgreen;
+}
+
+#jobb {
+    width: 600px;
+    float: right;
+    border-right: 2px forestgreen solid;
+    background-color: lavender;
+    padding: 10px;
+}
+
+#bal {
+    width: 200px;
+    float: left;
+    background-color: tomato;
+    }
+
+.idezet {
+    border-left: 4px forestgreen solid;
+    padding-left: 1em;
+    border-left: 2px solid forestgreen;
+    margin-left: 2em;
+}
+
+.lebeg_jobbra {
+    float: right;
+    margin: 10px;
+}
+
+#video  {  text-align: center; 
+         /*border: 1px solid tomato;*/
+        }

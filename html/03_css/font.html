@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Betűk mérete: font-size
+        </title>
+        <style type="text/css">
+        p { margin: 0px }
+        .meretek {
+        padding: 0px;  
+        background-color : lightgray;
+        display: inline-block;
+        border: 1px solid red;
+        }
+        #em {
+        height: 1em;
+        font-size: 2em;
+        }
+        #per {
+        }
+        #vw {
+        height: 3vw;
+        font-size: 3vw;
+        }
+        </style>
+    </head>
+    <body>
+        <div style="font-size:22pt;">
+            <!-- kiválasztott méret -->
+            <p style="">
+                Kiválasztott font méret: 22pt
+            </p>
+            <p>
+                normál:<span class="meretek" id="per">&nbsp;A</span> 2em:
+                <span class="meretek" id="em">&nbsp;A</span> 3vw:<span class=
+                "meretek" id="vw">&nbsp;A</span>
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p style="font-size: 18px;">
+                font-size: 18px
+            </p>
+            <p style="font-size:larger;">
+                larger
+            </p>
+            <p style="font-size:smaller;">
+                smaller
+            </p>
+            <p style="font-size:2em;">
+                2em-re növelve
+            </p>
+            <p style="font-size:200%;">
+                200%-ra növelve
+            </p>
+            <p style="">
+                kis x
+            </p>
+            <p style="font-size:4ex">
+                4ex-re változtatva
+            </p>
+            <p style="font-size:12pt">
+                12 pt -re változtatva
+            </p>
+            <p></p>
+        </div>
+        <pre id="code"><code>
+</code></pre>
+    </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+                               "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Egy oszlopos HTML sablon</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<style type="text/css">
+<!--
+
+html, body {
+  padding:0px; margin:0px;
+  height: 100%; /* elfoglalják a teljes ablakot */ 
+}
+
+#holder {
+  position: relative;
+  top: 0px; 
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  height: 100%;        /* egészen leereszkedik, tartalomtól függetlenül */
+
+}
+
+#header {                /* fejléc */
+  background: #CC9966;
+  border: 1px solid black;
+}
+
+#footer {     /* lábléc */
+  background: #339999;
+  border: 1px solid black;
+}
+
+#content {   /* tartalmi rész */
+  position: relative;        /* pozicionált, hogy ezen belül lehessen
+                                a menüt elhelyezni */
+  background: #CCCCFF;   
+  border: 1px solid black;
+  padding-left: 12em;       /* balra 12em szabad, oda kerüla menü */
+  padding-right: 2em;
+  height: 100%;
+}
+
+#menu {
+  position: absolute; 
+
+  left: 2em; top: 4em;  /* 12 em hely van, így szélessége 8em lesz
+                           és mindkét oldalán 1em marad szabad */ 
+  width: 8em;
+
+  border: 1px solid black;
+  background: #CC6666;
+
+}
+
+#menu li {
+    list-style-type: none;
+}
+
+-->
+</style>
+</head>
+<body>
+
+<div id="holder">  <!-- mindent ez tartalmaz -->
+
+<div id="header">
+    <h1>Fejléc tartalma</h1>
+</div>
+
+<div id="content">
+<div id="menu">
+<ul>
+    <li><a href="#1">Menü 1</a></li>
+    <li><a href="#2">Menü 2</a></li>
+    <li><a href="#3">Menü 3</a></li>
+    <li><a href="#4">Menü 4</a></li>
+</ul>
+</div>
+    <h1>Tartalom</h1>
+    <p>A gimnázium első osztályától kezdve az állami, hagyományosnak mondott iskolákban ugyanis fokozatosan leszoktatják a gyerekeket arról, hogy szabadon megnyilvánuljanak, az éneket, a zenét, a rajzot, a játékot, a mozgást a minimumra redukálják, hogy a középiskolában, hacsak nem művészeti osztályokról van szó, teljesen meg is szüntessék. </p>
+    <p>A gimnázium első osztályától kezdve az állami, hagyományosnak mondott iskolákban ugyanis fokozatosan leszoktatják a gyerekeket arról, hogy szabadon megnyilvánuljanak, az éneket, a zenét, a rajzot, a játékot, a mozgást a minimumra redukálják, hogy a középiskolában, hacsak nem művészeti osztályokról van szó, teljesen meg is szüntessék. </p>
+    <p>A gimnázium első osztályától kezdve az állami, hagyományosnak mondott iskolákban ugyanis fokozatosan leszoktatják a gyerekeket arról, hogy szabadon megnyilvánuljanak, az éneket, a zenét, a rajzot, a játékot, a mozgást a minimumra redukálják, hogy a középiskolában, hacsak nem művészeti osztályokról van szó, teljesen meg is szüntessék. </p>
+    <p>A gimnázium első osztályától kezdve az állami, hagyományosnak mondott iskolákban ugyanis fokozatosan leszoktatják a gyerekeket arról, hogy szabadon megnyilvánuljanak, az éneket, a zenét, a rajzot, a játékot, a mozgást a minimumra redukálják, hogy a középiskolában, hacsak nem művészeti osztályokról van szó, teljesen meg is szüntessék. </p>
+    <p>A gimnázium első osztályától kezdve az állami, hagyományosnak mondott iskolákban ugyanis fokozatosan leszoktatják a gyerekeket arról, hogy szabadon megnyilvánuljanak, az éneket, a zenét, a rajzot, a játékot, a mozgást a minimumra redukálják, hogy a középiskolában, hacsak nem művészeti osztályokról van szó, teljesen meg is szüntessék. </p>
+</div>
+
+
+<div id="footer">
+<h1>Lábléc tartalma</h1>
+</div>
+
+</div> <!-- holder vege -->
+
+</body>
+</html>

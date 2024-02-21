@@ -1,0 +1,32 @@
+{
+    "window.zoomLevel": 1, //2.8,
+
+    "editor.tokenColorCustomizations": {
+        // "semanticHighlighting": true
+    },
+
+    "spellright.configurationScope": "workspace",
+
+    "spellright.language": [
+        "hu_HU"
+    ],
+    "spellright.documentTypes": [
+        "javascript",
+        "html",
+    ],
+
+    "spellright.spellContextByClass": {
+         "javascript":  "comments strings",
+         "html": "body comments strings",
+    },
+    "spellright.ignoreRegExpsByClass": {
+        "html": [ "/<script[^>]*>[^]*?</script>/gm",  "/<style[^>]*>[^]*?</style>/gm"],
+    },
+
+    "cmake.configureOnOpen": false,
+
+    //HTML CSS Support
+    "css.enabledLanguages": ["html"],
+
+
+}

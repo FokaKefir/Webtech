@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        Szelektorok
+    </title>
+    <meta charset="utf-8">
+    <meta name="description" content="Tartalom leírása">
+    <meta name="keywords" content="szó1, szó2, szó3">
+    <style>
+        div {
+            border: 1px solid black;
+            width: 30em;
+        }
+
+        p {
+            padding: 0.2em;
+        }
+
+        /* az első paragrafuson kívül mindegyik 
+        zöld színű lesz */
+
+        p:not(:first-child) {
+            color: teal;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cikk1">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <p>
+            Vivamus scelerisque quam ut lorem consectetur lacinia.
+        </p>
+        <p>
+            Donec auctor mi nec arcu iaculis fermentum. Integer non varius erat.
+        </p>
+        <p>
+            Nunc in lacus a sem ultricies posuere ultricies cursus urna.
+        </p>
+        <p>
+            Nullam vulputate dui eros, at rutrum urna molestie et.
+        </p>
+    </div>
+</body>
+
+</html>

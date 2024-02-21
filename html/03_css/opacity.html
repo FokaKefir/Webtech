@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        Átlátszatlanság-Opacity
+    </title>
+    <meta name="description" content="Bevezetés a webprogramozásba">
+    <style type="text/css">
+        .para {}
+
+        #kiemelt {
+            visibility: hidden;
+            width: 300px;
+            height: 200px;
+            background: tomato;
+            opacity: 0.8;
+            position: fixed;
+            top: 50px;
+            left: 100px;
+            border-radius: 10px;
+            font-size: 12pt;
+            overflow: scroll;
+            padding: 0.5em;
+            margin: 0.1em;
+            font-weight: bold;
+        }
+
+        .kiemelt p {
+            margin: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        „
+        <a href="#" onclick='e=getElementById("kiemelt"); s=e.style.visibility ; if (s!="visible") e.style.visibility="visible";else e.style.visibility="hidden";'>A mai iskola</a>” – írja Bodor –, „vagy aránylag elviselhető hely, ahol az ember barátokat szerez és nem tanul semmit,
+        vagy testet-lelket-szellemet nyomorító papagájképző, ahol a gyerekek azt sajátítják el, hogy a nekik feltett kérdésben
+        megtalálják azt a formulát, amit már tanultak, és felidézzék az erre adandó helyes választ.”
+    </p>
+    <p>
+        S ha ez így áll – és így áll az esetek elsöprő többségében –, azt gondolhatnánk, hogy mi sem egyszerűbb, mint ezen változtatni:
+        demokráciában élünk, az iskola is demokratikus intézmény, a tanárnak is, a diáknak is megvannak az ésszerű jogai,
+        ha meg nincsenek meg, akkor harcolja ki, és nyerni fog, mert ma már ez alkotmányban rögzített jogunk, szóval elég,
+        ha a tanár felkészült és nyitott, elég, ha nem adja meg, hogy egy kérdésre mi az egyetlen jó válasz, a diák gondolkodik,
+        utánanéz, és kész, mindenki jól járt.
+    </p>
+    <div id="kiemelt">
+        <p>
+            „A mai iskola” – írja Bodor –, „vagy aránylag elviselhető hely, ahol az ember barátokat szerez és nem tanul semmit, vagy
+            testet-lelket-szellemet nyomorító papagájképző, ahol a gyerekek azt sajátítják el, hogy a nekik feltett kérdésben
+            megtalálják azt a formulát, amit már tanultak, és felidézzék az erre adandó helyes választ.”
+        </p>
+    </div>
+</body>
+
+</html>

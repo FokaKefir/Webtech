@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <title>Menü</title>
+    <!--
+        Menü készítése flexboxal
+        Az ul helyett lehet a menu elemet is használni, aminek szemantikus jelentése van.
+    -->
+    <meta charset="utf-8" />
+    <style type="text/css">
+     
+    body, div, ul {
+        margin: 0px; padding: 0px;
+     }
+
+      #tarto {
+        width: max-content; 
+        border: 2px solid red;
+        padding: 1em;
+        background-color: moccasin;
+      }
+
+      #nav {
+        display: flex;
+        gap: 0.5em;
+        list-style-type: none;
+      }
+
+      #nav li {
+        flex: 0 0 auto;
+
+        padding: 1em;
+        background-color: darkseagreen;
+        justify-content:left; 
+        box-sizing: border-box;
+        width: max-content;
+        border-radius: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="tarto">
+      <ul id="nav">
+        <li><a href="#1">Menü 1</a></li>
+        <li><a href="#1">Menü 2</a></li>
+        <li><a href="#1">Menü 3</a></li>
+        <li><a href="#1">Menü 4</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

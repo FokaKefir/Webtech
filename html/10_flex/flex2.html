@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FlexBox 2 példa - a flex tartalmazó elem tulajdonságai</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        .container {
+            height: 300px;
+            width: 500px;
+            display: flex;
+            flex-direction: row;
+            /* értékek: row, column, row-reverse, column-reverse */
+
+            flex-wrap: nowrap ;  
+                  /* értékek: wrap, nowrap, wrap-reverse */
+
+            /* justify-content: space-between; */
+                 /* értékek: flex-start,flex-end,center, space-between, space-arounds, pace-evenly */
+
+           /*align-content: flex-start;*/ 
+                 /* értékek:  flex-start, flex-end, center, baseline, stretch */
+
+             
+            /* border: 2px solid black; */
+        }
+
+        .elso {
+            background-color: bisque;
+        }
+
+        .masodik {
+            background-color: lightgray;
+            order: -1;
+        }
+
+        .harmadik {
+            background-color: lightcyan;
+            align-self: flex-end; 
+        }
+
+        .negyedik {
+            background-color: lightgreen;
+        }
+
+        .item {
+            border: 2px solid red;
+            padding: 0.5em;
+            box-sizing: border-box;
+            width: 40%;
+            height: 20%; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="elso item">
+            <p>1. Raesent.</p>
+        </div>
+        <div class="masodik item">
+            <p>2. Raesent.</p>
+        </div>
+        <div class="harmadik item">
+            <p>3. Raesent. </p>
+        </div>
+        <div class="negyedik item">
+            <p>4. Raesent. </p>
+        </div>
+    </div>
+</body>
+
+</html>

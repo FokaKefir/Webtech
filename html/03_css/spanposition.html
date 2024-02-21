@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            A display és visibility tulajdonságok&gt;
+        </title>
+        <style type="text/css">
+        body { font-size: 14pt; }
+        #elso {
+        background-color: moccasin;
+        }
+        #masodik {
+        background-color: lightgreen;
+        /* az alábbi 2 sort külön-külön aktiválva, jól látszik a két
+        eltüntetési lehetőség közti különbség */
+        /* visibility: hidden; */
+        /* display: none; */
+        }
+        #harmadik {
+        background-color: skyblue;
+        }
+        </style>
+    </head>
+    <body>
+        <p>
+            Lorem ipsum dolor sit amet, <span id="elso">consectetur adipiscing
+            elit.</span> <span id="masodik">Suspendisse tincidunt sapien in
+            magna laoreet sed rutrum sem fermentum.</span> <span id=
+            "harmadik">Sed eu justo sapien, quis elementum odio.</span> Proin
+            sed dui in augue luctus volutpat. Nam accumsan pretium ante, ac
+            imperdiet dui convallis non. Nam eleifend dignissim neque, id
+            auctor tortor dapibus vel.
+        </p>
+    </body>
+</html>

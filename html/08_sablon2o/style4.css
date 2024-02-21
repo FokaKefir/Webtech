@@ -1,0 +1,118 @@
+html, body {
+    margin: 0px; padding: 0px;
+    height: 100%;
+}
+
+p {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 12pt;
+    text-indent: 3em;
+}
+
+h1 {
+     font-family: Arial, sans-serif;
+     font-size: 25pt;
+     text-align: center;
+     border-bottom: 0.1em dotted forestgreen;
+     margin: 0.5em;
+     width: 13em;
+     margin-right: 0.5em;
+     margin-left: auto;
+}
+
+h1 + p:first-letter { font-size: 20pt ;  /* h1 első betűje */
+                        color: tomato;
+                       font-weight: bold;
+    }
+
+#fejlec h2 {  /* kis szöveg a fejléc bal alsó sarkában */
+    font-family: Verdana, Arial, Helvetica,  sans-serif;
+    font-style: italic;
+    font-size: 10pt;
+    color: lavender;
+    margin: 0px;
+    padding: 2px;
+    position: absolute;  /* abszolut elhelyezés */
+    bottom: 0.2em;
+    left: 0.2em;
+    }
+
+
+#tarto {
+    margin-bottom: 4px;
+    width: 900px;       /* szélesség pixelben */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: tomato;
+    top: 0px; left: 0px;
+}
+
+#fejlec {
+    position: relative;
+    margin-top: 0px; 
+    height: 200px;
+    background-color: forestgreen;
+    background-image: url("http://www.ms.sapientia.ro/~lszabo/nyiltnap/fejlec_hatter.jpg");
+}
+
+#lablec {
+    height: 30px;
+    clear: both;
+    background-color: forestgreen;
+    line-height: 30px;
+}
+
+#jobb {
+    width: 650px;
+    float: right;
+    border-right: 2px forestgreen solid;
+    background-color: lavender;
+    padding: 10px;
+}
+
+#bal {
+    width: 200px;
+    float: left;
+    background-color: tomato;
+    }
+
+.idezet {
+    border-left: 4px forestgreen solid;
+    padding-left: 1em;
+    border-left: 2px solid forestgreen;
+    margin-left: 2em;
+   
+}
+
+.lebeg_jobbra {
+    float: right;
+    margin: 10px;
+}
+
+#video  {  text-align: center; 
+         /*border: 1px solid tomato;*/
+        }
+
+#bal ul {
+    margin-top: 2em;
+}
+
+#bal li {
+    list-style-type: none;
+    background-color: lavender; 
+    margin: 4px;
+    padding: 1px;
+    width: 5em;
+}
+
+.lablec_szoveg {
+    text-align: center;
+    font-size: 10pt;
+    font-style: italic;
+}
+
+.piros { color: red; }
+
+#vid {
+    width:425px; height:344px;
+}

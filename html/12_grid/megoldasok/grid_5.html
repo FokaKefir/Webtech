@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>Grid példa</title>
+    <meta charset="utf-8">
+
+    <style type="text/css">
+        /* kiinduló CSS a grid feladathoz */
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color:cornsilk ;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(4,1fr);
+            width: 1024px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 100vh;
+        }
+
+        .gitem {
+            background-color: lightgray;
+            padding: 0.5em;
+            border: 1px solid red;
+        }
+
+        .item1 {
+            grid-row: 1 / 5;
+            grid-column: 1;
+        }
+
+        .item2 {
+            grid-row: 1 / 5;
+            grid-column: 2 / 4;
+        }
+
+        .item3 {
+            grid-row: 1 / 5;
+            grid-column: 4;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="container">
+        <div class="gitem item1">
+            <p>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis semper ex, nec commodo sapien. Praesent
+                nec massa at ligula tempor viverra ut id dolor. Nunc quis semper ex, nec commodo sapien. Praesent nec massa
+                at ligula tempor viverra ut id dolor. Suspendisse pulvinar lacinia iaculis. Donec sapien quam, hendrerit
+                sed velit a, tincidunt finibus ligula. Nunc nec tempus lorem, vitae dapibus ipsum. Etiam vitae lectus a lorem
+                volutpat mollis nec sed ligula. Duis bibendum finibus augue eu lacinia. Morbi lacinia ipsum ac diam porttitor, a mollis augue eleifend. Aliquam eget lacus quam. Sed vel venenatis dolor. Ut feugiat ipsum id fringilla vulputate. Proin feugiat lorem eget lobortis fringilla. Mauris mattis tellus purus, vitae imperdiet quam consectetur id. In convallis sapien convallis condimentum scelerisque. Nunc condimentum massa ut luctus blandit. Proin est enim, bibendum non consectetur in, tincidunt sit amet neque. Aliquam eu feugiat odio. Quisque rhoncus placerat auctor. Suspendisse commodo neque quam, a aliquet sapien dignissim ut. Phasellus in orci ac elit eleifend imperdiet. </p>
+        </div>
+        <div class="gitem item2">
+            <p>2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis semper ex, nec commodo sapien. Praesent
+                nec massa at ligula tempor viverra ut id dolor. Nunc quis semper ex, nec commodo sapien. Praesent nec massa
+                at ligula tempor viverra ut id dolor. Suspendisse pulvinar lacinia iaculis. Donec sapien quam, hendrerit
+                sed velit a, tincidunt finibus ligula. Nunc nec tempus lorem, vitae dapibus ipsum. Etiam vitae lectus a lorem
+                volutpat mollis nec sed ligula. Duis bibendum finibus augue eu lacinia. Morbi lacinia ipsum ac diam porttitor, a mollis augue eleifend. Aliquam eget lacus quam. Sed vel venenatis dolor. Ut feugiat ipsum id fringilla vulputate. Proin feugiat lorem eget lobortis fringilla. Mauris mattis tellus purus, vitae imperdiet quam consectetur id. In convallis sapien convallis condimentum scelerisque. Nunc condimentum massa ut luctus blandit. Proin est enim, bibendum non consectetur in, tincidunt sit amet neque. Aliquam eu feugiat odio. Quisque rhoncus placerat auctor. Suspendisse commodo neque quam, a aliquet sapien dignissim ut. Phasellus in orci ac elit eleifend imperdiet. </p>
+        </div>
+        <div class="gitem item3">
+            <p>3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis semper ex, nec commodo sapien. Praesent
+                nec massa at ligula tempor viverra ut id dolor. Nunc quis semper ex, nec commodo sapien. Praesent nec massa
+                at ligula tempor viverra ut id dolor. Suspendisse pulvinar lacinia iaculis. Donec sapien quam, hendrerit
+                sed velit a, tincidunt finibus ligula. Nunc nec tempus lorem, vitae dapibus ipsum. Etiam vitae lectus a lorem
+                volutpat mollis nec sed ligula. Duis bibendum finibus augue eu lacinia. Morbi lacinia ipsum ac diam porttitor, a mollis augue eleifend. Aliquam eget lacus quam. Sed vel venenatis dolor. Ut feugiat ipsum id fringilla vulputate. Proin feugiat lorem eget lobortis fringilla. Mauris mattis tellus purus, vitae imperdiet quam consectetur id. In convallis sapien convallis condimentum scelerisque. Nunc condimentum massa ut luctus blandit. Proin est enim, bibendum non consectetur in, tincidunt sit amet neque. Aliquam eu feugiat odio. Quisque rhoncus placerat auctor. Suspendisse commodo neque quam, a aliquet sapien dignissim ut. Phasellus in orci ac elit eleifend imperdiet. </p>
+        </div>
+    </div>
+
+</body>
+
+</html>

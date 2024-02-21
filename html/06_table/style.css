@@ -1,0 +1,46 @@
+#tab {
+    width: 400px;
+    background-color: #CCCC99;
+    /* a cellák keretét összevonja , értekei
+                collapse | separate | inherit */
+    border-collapse: separate;
+    border-spacing: 8px;
+
+/*    border-collapse: collapse;*/
+  /*  display: inline-table;*/
+}
+
+#tab th,td {
+    border: 1px solid #663300; /* a cellák köré rajzolt keret */
+       /* ugyanazok az ertekek ervenyesek mint a doboznal */
+    padding: 0.2em;  /* kitoltes */
+    height: 40px;
+    vertical-align: top; 
+}
+
+.masodik  {
+    background-color: tomato !important;
+    vertical-align: bottom !important;
+}
+
+#tab td {
+    text-align: center;
+}
+
+/*a fejlec cellainak hattere mas szinu */
+
+.fejlec th {
+    background-color: #996633;
+    color: white;
+}
+
+/* a caption - cim stilusa */
+
+caption {
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+    font-size: 14 pt;
+    font-variant: small-caps;
+/* hol helyezkedik el es hogyan */
+    caption-side: top;
+    text-align: left;
+}

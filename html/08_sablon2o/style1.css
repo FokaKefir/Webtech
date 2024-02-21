@@ -1,0 +1,61 @@
+html, body {
+    margin: 0px; padding: 0px;
+}
+
+p {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 12pt;
+    text-indent: 3em;
+}
+
+
+
+#tarto {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: tomato;
+}
+
+#fejlec {
+    height: 200px;
+    background-color: forestgreen;
+}
+
+#lablec {
+    height: 30px;
+    clear: both;
+    background-color: forestgreen;
+}
+
+#jobb {
+    width: 600px;
+    float: right;
+    border-right: 2px forestgreen solid;
+    background-color: lavender;
+    padding: 10px;
+    height: 1024px;
+}
+
+#bal {
+    width: 200px;
+    float: left;
+    background-color: tomato;
+    }
+
+.idezet {
+    border-left: 4px forestgreen solid;
+    padding-left: 1em;
+    border-left: 2px solid forestgreen;
+    margin-left: 2em;
+   
+}
+
+.lebeg_jobbra {
+    float: right;
+    margin: 10px;
+}
+
+#video  {  text-align: center; 
+         /*border: 1px solid tomato;*/
+        }

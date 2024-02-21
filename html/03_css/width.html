@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        Width, margin: auto
+    </title>
+    <style type="text/css">
+        body {
+            border: 0px;
+            margin: 0px;
+            padding: 0px;
+            height: 500px;
+            /*meg kell adni, ha % ban adom a 
+                             tartalmazott div magasságát */
+        }
+
+        #oldal {
+            max-width: 70%;
+            /* az oldal maximális szélessége */
+            /* min-height: 60%;*/
+            min-height: 200px;
+
+            margin-left: auto;
+            /* középre kerül, kiszámolt érték lesz*/
+            margin-right: auto;
+            /* a két margin egyenlő */
+            background-color: lightgray;
+            border: 2px solid red;
+
+            padding: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="oldal">
+        <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam mattis orci non elementum
+            maximus. Fusce sit amet luctus massa, non dictum metus. Integer elementum lacus ut magna facilisis facilisis.
+            Praesent non eros non diam sodales maximus. Curabitur vitae vehicula enim. Donec ut ex finibus, iaculis ligula
+            a, fermentum augue. Phasellus pulvinar, lorem sed luctus condimentum, diam augue condimentum magna, at aliquet
+            purus sapien ac nunc. Praesent cursus condimentum nisl sit amet ornare. Proin eget felis ac orci efficitur dictum
+            ac sed magna.</p>
+    </div>
+</body>
+
+</html>

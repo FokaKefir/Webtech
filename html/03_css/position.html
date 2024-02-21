@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        Relatív pozíció
+    </title>
+    <style type="text/css">
+        body {
+            font-size: 11pt;
+        }
+
+        #elso {
+            border: 1px solid green;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #para1 {
+            /* Bevezető paragrafus */
+        }
+
+        #para2 {
+            /* Nyugodtan rohanunk a szakadékba ..*/
+            /* margin:0px;*/
+            border: 1px solid purple;
+            position: relative;
+            /* elmozdítva a  normál folyamban található 
+                             helyéhez képest 
+                             ha töröljük ezt a tulajdonságot visszaugrik
+                            a normál folyam beli helyére */
+            top: 20px;
+            left: 20px;
+
+            background: lightgray;
+        }
+
+        #para3 {
+            /* Befejező paragrafus */
+            color: gray;
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="elso">
+        <p id="para1">
+            Bevezető paragrafus
+        </p>
+        <p id="para2">
+            Nyugodtan rohanunk a szakadékba is, ha sikerült valamivel eltakarnunk a szemünk elől.(Pascal: Gondolatok, 183)
+        </p>
+        <p id="para3">
+            Befejező paragrafus
+        </p>
+    </div>
+</body>
+
+</html>

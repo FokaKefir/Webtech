@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      Elemek címzése szelektorok által
+    </title>
+    <style type="text/css">
+    /* h2 mindegyik szabályt örökli, 
+       az ős elemektől örökölt tulajdonságok közül az erősebb győz */
+      .belso {
+        color: gray;
+      } 
+      div {
+        color: green;
+      } 
+      #elso {
+          color: black;
+      }
+      #masodik {
+          color: red;
+      }
+    </style>
+  </head>
+  <body style="font-size: x-large;">
+    <div id="elso">
+      <div id="masodik" class="belso">
+        <h2>
+          Címsor
+        </h2>
+      </div>
+    </div>
+  </body>
+</html>

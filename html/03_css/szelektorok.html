@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Különböző CSS szelektorok
+        </title>
+        <style type="text/css">
+        
+        p { color : red ; } /* piros a paragrafus */
+        .zold { color : green } /* zold osztály */
+        #elso { color : yellow ; } /*az elso id-jű elem */
+        .zold p { color : gray ; } /* paragrafus amelyet egy zold osztályú
+                                    másik elem tartalmaz */
+        p .zold { color: blue ;} /* zold osztályú elem, amely egy 
+                                     paragrafus leszármazottja */
+        p.bibor { color: purple;} /* zold osztályba tartozó paragrafus */
+        h2 + h3 { color: maroon } /* a h3 közvetlenül a h2 után jön */
+        p > cite { color: olive ;} /* a cite közvetlen gyermeke egy paragrafusnak */
+        /* p:not(.zold) {color: black} */ /* a not() szelektor */
+        /* #szelektorok  p:not(.zold) {color: black;}  */
+        
+        </style>
+    </head>
+    <body>
+      <div id="szelektorok">
+        <p>
+            Ez a paragrafus piros lesz
+        </p>
+        <p class="zold">
+            Ez a paragrafus zöld lesz
+        </p>
+        <p id="elso">
+            Ez a paragrafus sárga lesz
+        </p>
+        <div class="zold">
+            <p>
+                Ez a paragrafus szürke lesz
+            </p>
+        </div>
+        <p>
+            Szöveg <em class="zold">ez a része kék lesz</em>
+        </p>
+        <p class="bibor">
+            Bíbor szöveg
+        </p>
+        <h2>
+            H2 szöveg
+        </h2>
+        <h3>
+            Ez a h3 barna lesz, mert h2 után jön.
+        </h3>
+        <p>
+            <cite>Hivatkozás szövege: olive</cite>
+        </p>
+     </div>
+    </body>
+</html>

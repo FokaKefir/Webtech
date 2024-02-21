@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Sticky pozíció
+        </title>
+        <style type="text/css">
+
+            body { font-size: 11pt; }
+            #elso,#masodik,#harmadik {
+                border: 1px solid green;
+                padding: 0px;    
+                margin: 4px;
+            }
+            h1  {
+                margin: 4px;
+                border: 1px solid purple;
+                position: sticky ; /* sticky pozíció: relatív egy küszöbig, utána fix */
+                top: 10px;  /*ez a sticky pozíció küszöb értéke */
+                background: lightgray;
+                padding: 0.2em;
+            }
+            #para3 {
+                margin: 0px;
+                color: gray;
+                background: yellow;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="elso">
+            <h1 class='stick'>Első rész</h1>
+            <p>
+                Hosszú időt töltöttem az elvont tudományok tanulmányozásával; de
+                kedvemet szegte az, hogy milyen kevés emberi kapcsolatot
+                szerezhetünk segítségükkel. Amikor az embert kezdtem tanulmányozni,
+                rájöttem, hogy ezek az elvont tudományok nem valók az embernek, és
+                hogy beható tanulmányozásukkal kevesebbet tudtam meg emberi
+                állapotomról, mint azok, akik semmit sem konyítanak hozzájuk.
+                Megbocsátottam hát nekik, hogy oly keveset tudnak belőlük. Azt
+                hittem azonban, hogy legalább az ember tanulmányozásában lelek majd
+                társakra, hogy ez az igazi, embernek való kutatási terület. De
+                csalatkoztam; az embert még a geometriánál is kevesebben
+                tanulmányozzák. Csak azért kutatnak egyebet, mert nem képesek
+                tanulmányozni az embert; de vajon nem azért van-e ez így, mert nem
+                erre a tudományra van szüksége az embernek, s hogy boldogsága
+                érdekében jobb neki, ha nem ismeri önmagát?
+            </p>
+            <p>
+                Hosszú időt töltöttem az elvont tudományok tanulmányozásával; de
+                kedvemet szegte az, hogy milyen kevés emberi kapcsolatot
+                szerezhetünk segítségükkel. Amikor az embert kezdtem tanulmányozni,
+                rájöttem, hogy ezek az elvont tudományok nem valók az embernek, és
+                hogy beható tanulmányozásukkal kevesebbet tudtam meg emberi
+                állapotomról, mint azok, akik semmit sem konyítanak hozzájuk.
+                Megbocsátottam hát nekik, hogy oly keveset tudnak belőlük. Azt
+                hittem azonban, hogy legalább az ember tanulmányozásában lelek majd
+                társakra, hogy ez az igazi, embernek való kutatási terület. De
+                csalatkoztam; az embert még a geometriánál is kevesebben
+                tanulmányozzák. Csak azért kutatnak egyebet, mert nem képesek
+                tanulmányozni az embert; de vajon nem azért van-e ez így, mert nem
+                erre a tudományra van szüksége az embernek, s hogy boldogsága
+                érdekében jobb neki, ha nem ismeri önmagát?
+            </p>
+            <p>
+                Hosszú időt töltöttem az elvont tudományok tanulmányozásával; de
+                kedvemet szegte az, hogy milyen kevés emberi kapcsolatot
+                szerezhetünk segítségükkel. Amikor az embert kezdtem tanulmányozni,
+                rájöttem, hogy ezek az elvont tudományok nem valók az embernek, és
+                hogy beható tanulmányozásukkal kevesebbet tudtam meg emberi
+                állapotomról, mint azok, akik semmit sem konyítanak hozzájuk.
+                Megbocsátottam hát nekik, hogy oly keveset tudnak belőlük. Azt
+                hittem azonban, hogy legalább az ember tanulmányozásában lelek majd
+                társakra, hogy ez az igazi, embernek való kutatási terület. De
+                csalatkoztam; az embert még a geometriánál is kevesebben
+                tanulmányozzák. Csak azért kutatnak egyebet, mert nem képesek
+                tanulmányozni az embert; de vajon nem azért van-e ez így, mert nem
+                erre a tudományra van szüksége az embernek, s hogy boldogsága
+                érdekében jobb neki, ha nem ismeri önmagát?
+            </p>
+
+            <p>
+                Hosszú időt töltöttem az elvont tudományok tanulmányozásával; de
+                kedvemet szegte az, hogy milyen kevés emberi kapcsolatot
+                szerezhetünk segítségükkel. Amikor az embert kezdtem tanulmányozni,
+                rájöttem, hogy ezek az elvont tudományok nem valók az embernek, és
+                hogy beható tanulmányozásukkal kevesebbet tudtam meg emberi
+                állapotomról, mint azok, akik semmit sem konyítanak hozzájuk.
+                Megbocsátottam hát nekik, hogy oly keveset tudnak belőlük. Azt
+                hittem azonban, hogy legalább az ember tanulmányozásában lelek majd
+                társakra, hogy ez az igazi, embernek való kutatási terület. De
+                csalatkoztam; az embert még a geometriánál is kevesebben
+                tanulmányozzák. Csak azért kutatnak egyebet, mert nem képesek
+                tanulmányozni az embert; de vajon nem azért van-e ez így, mert nem
+                erre a tudományra van szüksége az embernek, s hogy boldogsága
+                érdekében jobb neki, ha nem ismeri önmagát?
+            </p>
+            </div>
+            <div id="masodik">
+            <h1 class='stick'>Második rész</h1>
+            <p>
+                Hosszú időt töltöttem az elvont tudományok tanulmányozásával; de
+                kedvemet szegte az, hogy milyen kevés emberi kapcsolatot
+                szerezhetünk segítségükkel. Amikor az embert kezdtem tanulmányozni,
+                rájöttem, hogy ezek az elvont tudományok nem valók az embernek, és
+                hogy beható tanulmányozásukkal kevesebbet tudtam meg emberi
+                állapotomról, mint azok, akik semmit sem konyítanak hozzájuk.
+                Megbocsátottam hát nekik, hogy oly keveset tudnak belőlük. Azt
+                hittem azonban, hogy legalább az ember tanulmányozásában lelek majd
+                társakra, hogy ez az igazi, embernek való kutatási terület. De
+                csalatkoztam; az embert még a geometriánál is kevesebben
+                tanulmányozzák. Csak azért kutatnak egyebet, mert nem képesek
+                tanulmányozni az embert; de vajon nem azért van-e ez így, mert nem
+                erre a tudományra van szüksége az embernek, s hogy boldogsága
+                érdekében jobb neki, ha nem ismeri önmagát?
+            </p>
+            <p>
+                Hosszú időt töltöttem az elvont tudományok tanulmányozásával; de
+                kedvemet szegte az, hogy milyen kevés emberi kapcsolatot
+                szerezhetünk segítségükkel. Amikor az embert kezdtem tanulmányozni,
+                rájöttem, hogy ezek az elvont tudományok nem valók az embernek, és
+                hogy beható tanulmányozásukkal kevesebbet tudtam meg emberi
+                állapotomról, mint azok, akik semmit sem konyítanak hozzájuk.
+                Megbocsátottam hát nekik, hogy oly keveset tudnak belőlük. Azt
+                hittem azonban, hogy legalább az ember tanulmányozásában lelek majd
+                társakra, hogy ez az igazi, embernek való kutatási terület. De
+                csalatkoztam; az embert még a geometriánál is kevesebben
+                tanulmányozzák. Csak azért kutatnak egyebet, mert nem képesek
+                tanulmányozni az embert; de vajon nem azért van-e ez így, mert nem
+                erre a tudományra van szüksége az embernek, s hogy boldogsága
+                érdekében jobb neki, ha nem ismeri önmagát?
+            </p>
+            <p>
+                Hosszú időt töltöttem az elvont tudományok tanulmányozásával; de
+                kedvemet szegte az, hogy milyen kevés emberi kapcsolatot
+                szerezhetünk segítségükkel. Amikor az embert kezdtem tanulmányozni,
+                rájöttem, hogy ezek az elvont tudományok nem valók az embernek, és
+                hogy beható tanulmányozásukkal kevesebbet tudtam meg emberi
+                állapotomról, mint azok, akik semmit sem konyítanak hozzájuk.
+                Megbocsátottam hát nekik, hogy oly keveset tudnak belőlük. Azt
+                hittem azonban, hogy legalább az ember tanulmányozásában lelek majd
+                társakra, hogy ez az igazi, embernek való kutatási terület. De
+                csalatkoztam; az embert még a geometriánál is kevesebben
+                tanulmányozzák. Csak azért kutatnak egyebet, mert nem képesek
+                tanulmányozni az embert; de vajon nem azért van-e ez így, mert nem
+                erre a tudományra van szüksége az embernek, s hogy boldogsága
+                érdekében jobb neki, ha nem ismeri önmagát?
+            </p>
+            <p>
+                Hosszú időt töltöttem az elvont tudományok tanulmányozásával; de
+                kedvemet szegte az, hogy milyen kevés emberi kapcsolatot
+                szerezhetünk segítségükkel. Amikor az embert kezdtem tanulmányozni,
+                rájöttem, hogy ezek az elvont tudományok nem valók az embernek, és
+                hogy beható tanulmányozásukkal kevesebbet tudtam meg emberi
+                állapotomról, mint azok, akik semmit sem konyítanak hozzájuk.
+                Megbocsátottam hát nekik, hogy oly keveset tudnak belőlük. Azt
+                hittem azonban, hogy legalább az ember tanulmányozásában lelek majd
+                társakra, hogy ez az igazi, embernek való kutatási terület. De
+                csalatkoztam; az embert még a geometriánál is kevesebben
+                tanulmányozzák. Csak azért kutatnak egyebet, mert nem képesek
+                tanulmányozni az embert; de vajon nem azért van-e ez így, mert nem
+                erre a tudományra van szüksége az embernek, s hogy boldogsága
+                érdekében jobb neki, ha nem ismeri önmagát?
+            </p>
+            </div>
+            <div id="harmadik">
+            <h1 class='stick'>Harmadik rész</h1>
+
+            <p>
+                Hosszú időt töltöttem az elvont tudományok tanulmányozásával; de
+                kedvemet szegte az, hogy milyen kevés emberi kapcsolatot
+                szerezhetünk segítségükkel. Amikor az embert kezdtem tanulmányozni,
+                rájöttem, hogy ezek az elvont tudományok nem valók az embernek, és
+                hogy beható tanulmányozásukkal kevesebbet tudtam meg emberi
+                állapotomról, mint azok, akik semmit sem konyítanak hozzájuk.
+                Megbocsátottam hát nekik, hogy oly keveset tudnak belőlük. Azt
+                hittem azonban, hogy legalább az ember tanulmányozásában lelek majd
+                társakra, hogy ez az igazi, embernek való kutatási terület. De
+                csalatkoztam; az embert még a geometriánál is kevesebben
+                tanulmányozzák. Csak azért kutatnak egyebet, mert nem képesek
+                tanulmányozni az embert; de vajon nem azért van-e ez így, mert nem
+                erre a tudományra van szüksége az embernek, s hogy boldogsága
+                érdekében jobb neki, ha nem ismeri önmagát?
+            </p>
+            <p>
+                Hosszú időt töltöttem az elvont tudományok tanulmányozásával; de
+                kedvemet szegte az, hogy milyen kevés emberi kapcsolatot
+                szerezhetünk segítségükkel. Amikor az embert kezdtem tanulmányozni,
+                rájöttem, hogy ezek az elvont tudományok nem valók az embernek, és
+                hogy beható tanulmányozásukkal kevesebbet tudtam meg emberi
+                állapotomról, mint azok, akik semmit sem konyítanak hozzájuk.
+                Megbocsátottam hát nekik, hogy oly keveset tudnak belőlük. Azt
+                hittem azonban, hogy legalább az ember tanulmányozásában lelek majd
+                társakra, hogy ez az igazi, embernek való kutatási terület. De
+                csalatkoztam; az embert még a geometriánál is kevesebben
+                tanulmányozzák. Csak azért kutatnak egyebet, mert nem képesek
+                tanulmányozni az embert; de vajon nem azért van-e ez így, mert nem
+                erre a tudományra van szüksége az embernek, s hogy boldogsága
+                érdekében jobb neki, ha nem ismeri önmagát?
+            </p>
+            <p>
+                Hosszú időt töltöttem az elvont tudományok tanulmányozásával; de
+                kedvemet szegte az, hogy milyen kevés emberi kapcsolatot
+                szerezhetünk segítségükkel. Amikor az embert kezdtem tanulmányozni,
+                rájöttem, hogy ezek az elvont tudományok nem valók az embernek, és
+                hogy beható tanulmányozásukkal kevesebbet tudtam meg emberi
+                állapotomról, mint azok, akik semmit sem konyítanak hozzájuk.
+                Megbocsátottam hát nekik, hogy oly keveset tudnak belőlük. Azt
+                hittem azonban, hogy legalább az ember tanulmányozásában lelek majd
+                társakra, hogy ez az igazi, embernek való kutatási terület. De
+                csalatkoztam; az embert még a geometriánál is kevesebben
+                tanulmányozzák. Csak azért kutatnak egyebet, mert nem képesek
+                tanulmányozni az embert; de vajon nem azért van-e ez így, mert nem
+                erre a tudományra van szüksége az embernek, s hogy boldogsága
+                érdekében jobb neki, ha nem ismeri önmagát?
+            </p>
+            <p>
+                Hosszú időt töltöttem az elvont tudományok tanulmányozásával; de
+                kedvemet szegte az, hogy milyen kevés emberi kapcsolatot
+                szerezhetünk segítségükkel. Amikor az embert kezdtem tanulmányozni,
+                rájöttem, hogy ezek az elvont tudományok nem valók az embernek, és
+                hogy beható tanulmányozásukkal kevesebbet tudtam meg emberi
+                állapotomról, mint azok, akik semmit sem konyítanak hozzájuk.
+                Megbocsátottam hát nekik, hogy oly keveset tudnak belőlük. Azt
+                hittem azonban, hogy legalább az ember tanulmányozásában lelek majd
+                társakra, hogy ez az igazi, embernek való kutatási terület. De
+                csalatkoztam; az embert még a geometriánál is kevesebben
+                tanulmányozzák. Csak azért kutatnak egyebet, mert nem képesek
+                tanulmányozni az embert; de vajon nem azért van-e ez így, mert nem
+                erre a tudományra van szüksége az embernek, s hogy boldogsága
+                érdekében jobb neki, ha nem ismeri önmagát?
+            </p>
+            <p>
+                Hosszú időt töltöttem az elvont tudományok tanulmányozásával; de
+                kedvemet szegte az, hogy milyen kevés emberi kapcsolatot
+                szerezhetünk segítségükkel. Amikor az embert kezdtem tanulmányozni,
+                rájöttem, hogy ezek az elvont tudományok nem valók az embernek, és
+                hogy beható tanulmányozásukkal kevesebbet tudtam meg emberi
+                állapotomról, mint azok, akik semmit sem konyítanak hozzájuk.
+                Megbocsátottam hát nekik, hogy oly keveset tudnak belőlük. Azt
+                hittem azonban, hogy legalább az ember tanulmányozásában lelek majd
+                társakra, hogy ez az igazi, embernek való kutatási terület. De
+                csalatkoztam; az embert még a geometriánál is kevesebben
+                tanulmányozzák. Csak azért kutatnak egyebet, mert nem képesek
+                tanulmányozni az embert; de vajon nem azért van-e ez így, mert nem
+                erre a tudományra van szüksége az embernek, s hogy boldogsága
+                érdekében jobb neki, ha nem ismeri önmagát?
+            </p>
+            <p>
+                Hosszú időt töltöttem az elvont tudományok tanulmányozásával; de
+                kedvemet szegte az, hogy milyen kevés emberi kapcsolatot
+                szerezhetünk segítségükkel. Amikor az embert kezdtem tanulmányozni,
+                rájöttem, hogy ezek az elvont tudományok nem valók az embernek, és
+                hogy beható tanulmányozásukkal kevesebbet tudtam meg emberi
+                állapotomról, mint azok, akik semmit sem konyítanak hozzájuk.
+                Megbocsátottam hát nekik, hogy oly keveset tudnak belőlük. Azt
+                hittem azonban, hogy legalább az ember tanulmányozásában lelek majd
+                társakra, hogy ez az igazi, embernek való kutatási terület. De
+                csalatkoztam; az embert még a geometriánál is kevesebben
+                tanulmányozzák. Csak azért kutatnak egyebet, mert nem képesek
+                tanulmányozni az embert; de vajon nem azért van-e ez így, mert nem
+                erre a tudományra van szüksége az embernek, s hogy boldogsága
+                érdekében jobb neki, ha nem ismeri önmagát?
+            </p>
+            <p>
+                Hosszú időt töltöttem az elvont tudományok tanulmányozásával; de
+                kedvemet szegte az, hogy milyen kevés emberi kapcsolatot
+                szerezhetünk segítségükkel. Amikor az embert kezdtem tanulmányozni,
+                rájöttem, hogy ezek az elvont tudományok nem valók az embernek, és
+                hogy beható tanulmányozásukkal kevesebbet tudtam meg emberi
+                állapotomról, mint azok, akik semmit sem konyítanak hozzájuk.
+                Megbocsátottam hát nekik, hogy oly keveset tudnak belőlük. Azt
+                hittem azonban, hogy legalább az ember tanulmányozásában lelek majd
+                társakra, hogy ez az igazi, embernek való kutatási terület. De
+                csalatkoztam; az embert még a geometriánál is kevesebben
+                tanulmányozzák. Csak azért kutatnak egyebet, mert nem képesek
+                tanulmányozni az embert; de vajon nem azért van-e ez így, mert nem
+                erre a tudományra van szüksége az embernek, s hogy boldogsága
+                érdekében jobb neki, ha nem ismeri önmagát?
+            </p>
+            <p>
+                Hosszú időt töltöttem az elvont tudományok tanulmányozásával; de
+                kedvemet szegte az, hogy milyen kevés emberi kapcsolatot
+                szerezhetünk segítségükkel. Amikor az embert kezdtem tanulmányozni,
+                rájöttem, hogy ezek az elvont tudományok nem valók az embernek, és
+                hogy beható tanulmányozásukkal kevesebbet tudtam meg emberi
+                állapotomról, mint azok, akik semmit sem konyítanak hozzájuk.
+                Megbocsátottam hát nekik, hogy oly keveset tudnak belőlük. Azt
+                hittem azonban, hogy legalább az ember tanulmányozásában lelek majd
+                társakra, hogy ez az igazi, embernek való kutatási terület. De
+                csalatkoztam; az embert még a geometriánál is kevesebben
+                tanulmányozzák. Csak azért kutatnak egyebet, mert nem képesek
+                tanulmányozni az embert; de vajon nem azért van-e ez így, mert nem
+                erre a tudományra van szüksége az embernek, s hogy boldogsága
+                érdekében jobb neki, ha nem ismeri önmagát?
+            </p>
+            <p>
+                Hosszú időt töltöttem az elvont tudományok tanulmányozásával; de
+                kedvemet szegte az, hogy milyen kevés emberi kapcsolatot
+                szerezhetünk segítségükkel. Amikor az embert kezdtem tanulmányozni,
+                rájöttem, hogy ezek az elvont tudományok nem valók az embernek, és
+                hogy beható tanulmányozásukkal kevesebbet tudtam meg emberi
+                állapotomról, mint azok, akik semmit sem konyítanak hozzájuk.
+                Megbocsátottam hát nekik, hogy oly keveset tudnak belőlük. Azt
+                hittem azonban, hogy legalább az ember tanulmányozásában lelek majd
+                társakra, hogy ez az igazi, embernek való kutatási terület. De
+                csalatkoztam; az embert még a geometriánál is kevesebben
+                tanulmányozzák. Csak azért kutatnak egyebet, mert nem képesek
+                tanulmányozni az embert; de vajon nem azért van-e ez így, mert nem
+                erre a tudományra van szüksége az embernek, s hogy boldogsága
+                érdekében jobb neki, ha nem ismeri önmagát?
+            </p>
+            <p>
+                Hosszú időt töltöttem az elvont tudományok tanulmányozásával; de
+                kedvemet szegte az, hogy milyen kevés emberi kapcsolatot
+                szerezhetünk segítségükkel. Amikor az embert kezdtem tanulmányozni,
+                rájöttem, hogy ezek az elvont tudományok nem valók az embernek, és
+                hogy beható tanulmányozásukkal kevesebbet tudtam meg emberi
+                állapotomról, mint azok, akik semmit sem konyítanak hozzájuk.
+                Megbocsátottam hát nekik, hogy oly keveset tudnak belőlük. Azt
+                hittem azonban, hogy legalább az ember tanulmányozásában lelek majd
+                társakra, hogy ez az igazi, embernek való kutatási terület. De
+                csalatkoztam; az embert még a geometriánál is kevesebben
+                tanulmányozzák. Csak azért kutatnak egyebet, mert nem képesek
+                tanulmányozni az embert; de vajon nem azért van-e ez így, mert nem
+                erre a tudományra van szüksége az embernek, s hogy boldogsága
+                érdekében jobb neki, ha nem ismeri önmagát?
+            </p>
+            <p>
+                Hosszú időt töltöttem az elvont tudományok tanulmányozásával; de
+                kedvemet szegte az, hogy milyen kevés emberi kapcsolatot
+                szerezhetünk segítségükkel. Amikor az embert kezdtem tanulmányozni,
+                rájöttem, hogy ezek az elvont tudományok nem valók az embernek, és
+                hogy beható tanulmányozásukkal kevesebbet tudtam meg emberi
+                állapotomról, mint azok, akik semmit sem konyítanak hozzájuk.
+                Megbocsátottam hát nekik, hogy oly keveset tudnak belőlük. Azt
+                hittem azonban, hogy legalább az ember tanulmányozásában lelek majd
+                társakra, hogy ez az igazi, embernek való kutatási terület. De
+                csalatkoztam; az embert még a geometriánál is kevesebben
+                tanulmányozzák. Csak azért kutatnak egyebet, mert nem képesek
+                tanulmányozni az embert; de vajon nem azért van-e ez így, mert nem
+                erre a tudományra van szüksége az embernek, s hogy boldogsága
+                érdekében jobb neki, ha nem ismeri önmagát?
+            </p>
+            <p>
+                Hosszú időt töltöttem az elvont tudományok tanulmányozásával; de
+                kedvemet szegte az, hogy milyen kevés emberi kapcsolatot
+                szerezhetünk segítségükkel. Amikor az embert kezdtem tanulmányozni,
+                rájöttem, hogy ezek az elvont tudományok nem valók az embernek, és
+                hogy beható tanulmányozásukkal kevesebbet tudtam meg emberi
+                állapotomról, mint azok, akik semmit sem konyítanak hozzájuk.
+                Megbocsátottam hát nekik, hogy oly keveset tudnak belőlük. Azt
+                hittem azonban, hogy legalább az ember tanulmányozásában lelek majd
+                társakra, hogy ez az igazi, embernek való kutatási terület. De
+                csalatkoztam; az embert még a geometriánál is kevesebben
+                tanulmányozzák. Csak azért kutatnak egyebet, mert nem képesek
+                tanulmányozni az embert; de vajon nem azért van-e ez így, mert nem
+                erre a tudományra van szüksége az embernek, s hogy boldogsága
+                érdekében jobb neki, ha nem ismeri önmagát?
+            </p>
+            <p>
+                Hosszú időt töltöttem az elvont tudományok tanulmányozásával; de
+                kedvemet szegte az, hogy milyen kevés emberi kapcsolatot
+                szerezhetünk segítségükkel. Amikor az embert kezdtem tanulmányozni,
+                rájöttem, hogy ezek az elvont tudományok nem valók az embernek, és
+                hogy beható tanulmányozásukkal kevesebbet tudtam meg emberi
+                állapotomról, mint azok, akik semmit sem konyítanak hozzájuk.
+                Megbocsátottam hát nekik, hogy oly keveset tudnak belőlük. Azt
+                hittem azonban, hogy legalább az ember tanulmányozásában lelek majd
+                társakra, hogy ez az igazi, embernek való kutatási terület. De
+                csalatkoztam; az embert még a geometriánál is kevesebben
+                tanulmányozzák. Csak azért kutatnak egyebet, mert nem képesek
+                tanulmányozni az embert; de vajon nem azért van-e ez így, mert nem
+                erre a tudományra van szüksége az embernek, s hogy boldogsága
+                érdekében jobb neki, ha nem ismeri önmagát?
+            </p>
+            <p>
+                Hosszú időt töltöttem az elvont tudományok tanulmányozásával; de
+                kedvemet szegte az, hogy milyen kevés emberi kapcsolatot
+                szerezhetünk segítségükkel. Amikor az embert kezdtem tanulmányozni,
+                rájöttem, hogy ezek az elvont tudományok nem valók az embernek, és
+                hogy beható tanulmányozásukkal kevesebbet tudtam meg emberi
+                állapotomról, mint azok, akik semmit sem konyítanak hozzájuk.
+                Megbocsátottam hát nekik, hogy oly keveset tudnak belőlük. Azt
+                hittem azonban, hogy legalább az ember tanulmányozásában lelek majd
+                társakra, hogy ez az igazi, embernek való kutatási terület. De
+                csalatkoztam; az embert még a geometriánál is kevesebben
+                tanulmányozzák. Csak azért kutatnak egyebet, mert nem képesek
+                tanulmányozni az embert; de vajon nem azért van-e ez így, mert nem
+                erre a tudományra van szüksége az embernek, s hogy boldogsága
+                érdekében jobb neki, ha nem ismeri önmagát?
+            </p>
+            <p>
+                Hosszú időt töltöttem az elvont tudományok tanulmányozásával; de
+                kedvemet szegte az, hogy milyen kevés emberi kapcsolatot
+                szerezhetünk segítségükkel. Amikor az embert kezdtem tanulmányozni,
+                rájöttem, hogy ezek az elvont tudományok nem valók az embernek, és
+                hogy beható tanulmányozásukkal kevesebbet tudtam meg emberi
+                állapotomról, mint azok, akik semmit sem konyítanak hozzájuk.
+                Megbocsátottam hát nekik, hogy oly keveset tudnak belőlük. Azt
+                hittem azonban, hogy legalább az ember tanulmányozásában lelek majd
+                társakra, hogy ez az igazi, embernek való kutatási terület. De
+                csalatkoztam; az embert még a geometriánál is kevesebben
+                tanulmányozzák. Csak azért kutatnak egyebet, mert nem képesek
+                tanulmányozni az embert; de vajon nem azért van-e ez így, mert nem
+                erre a tudományra van szüksége az embernek, s hogy boldogsága
+                érdekében jobb neki, ha nem ismeri önmagát?
+            </p>
+            <p>
+                Hosszú időt töltöttem az elvont tudományok tanulmányozásával; de
+                kedvemet szegte az, hogy milyen kevés emberi kapcsolatot
+                szerezhetünk segítségükkel. Amikor az embert kezdtem tanulmányozni,
+                rájöttem, hogy ezek az elvont tudományok nem valók az embernek, és
+                hogy beható tanulmányozásukkal kevesebbet tudtam meg emberi
+                állapotomról, mint azok, akik semmit sem konyítanak hozzájuk.
+                Megbocsátottam hát nekik, hogy oly keveset tudnak belőlük. Azt
+                hittem azonban, hogy legalább az ember tanulmányozásában lelek majd
+                társakra, hogy ez az igazi, embernek való kutatási terület. De
+                csalatkoztam; az embert még a geometriánál is kevesebben
+                tanulmányozzák. Csak azért kutatnak egyebet, mert nem képesek
+                tanulmányozni az embert; de vajon nem azért van-e ez így, mert nem
+                erre a tudományra van szüksége az embernek, s hogy boldogsága
+                érdekében jobb neki, ha nem ismeri önmagát?
+            </p>
+            <p>
+                Hosszú időt töltöttem az elvont tudományok tanulmányozásával; de
+                kedvemet szegte az, hogy milyen kevés emberi kapcsolatot
+                szerezhetünk segítségükkel. Amikor az embert kezdtem tanulmányozni,
+                rájöttem, hogy ezek az elvont tudományok nem valók az embernek, és
+                hogy beható tanulmányozásukkal kevesebbet tudtam meg emberi
+                állapotomról, mint azok, akik semmit sem konyítanak hozzájuk.
+                Megbocsátottam hát nekik, hogy oly keveset tudnak belőlük. Azt
+                hittem azonban, hogy legalább az ember tanulmányozásában lelek majd
+                társakra, hogy ez az igazi, embernek való kutatási terület. De
+                csalatkoztam; az embert még a geometriánál is kevesebben
+                tanulmányozzák. Csak azért kutatnak egyebet, mert nem képesek
+                tanulmányozni az embert; de vajon nem azért van-e ez így, mert nem
+                erre a tudományra van szüksége az embernek, s hogy boldogsága
+                érdekében jobb neki, ha nem ismeri önmagát?
+            </p>
+            </div>
+
+    </body>
+</html>

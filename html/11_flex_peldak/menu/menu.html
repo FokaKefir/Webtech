@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <title>Menü</title>
+    <!--
+        Menü készítése flexbox-al
+    -->
+    <meta charset="utf-8" />
+    <style type="text/css">
+     
+    body, div, ul {
+        margin: 0px; padding: 0px;
+     }
+
+      #tarto {  /* a menüt összefogó elem */
+        width: max-content;  
+        border: 2px solid red;
+        padding: 1em;
+        background-color: moccasin;
+      }
+
+      #nav {   /* a flexbox elem - ez a menü*/
+        display: flex;
+        gap: 0.5em; /* rés a rugalmas elemek között */
+        list-style-type: none; /* a li elemek előtt nem lesz pont vagy más pötty */
+      }
+
+      #nav li {
+        flex: 0 0 auto; /* nem nő, nem csökken - akkora mint amennyit megadunk az elemen */
+
+        padding: 1em;
+        background-color: darkseagreen;
+        justify-content:left; 
+        box-sizing: border-box;
+        /* megadjuk az elem szélességét */
+        width: max-content; /* a menü elemek szélessége igazodik a tartalomhoz */
+        border-radius: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="tarto"> 
+      <ul id="nav">
+        <li><a href="#">Menü 1</a></li>
+        <li><a href="#">Menüett 2</a></li>
+        <li><a href="#">M3</a></li>
+        <li><a href="#">Menüett-eeeeeee 4</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

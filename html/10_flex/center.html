@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flexbox  példa</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        body {
+            margin: 0px; padding: 0px; 
+        }
+        p {
+            padding: 2px; margin: 4px;
+            font-size: smaller;
+        }
+        .container {
+            display: flex;
+                                     
+            justify-content: center; /* ha mindkét igazítás középre van
+                                        a kis doboz mindkét tengely szerint a nagy doboz
+                                        közepén található */
+            align-items: center;
+
+            border: 2px solid black;
+
+            width: 50%;  
+            height: 300px;
+        }
+        .item {
+            width: min-content;
+            border: 2px solid red;
+            box-sizing: border-box;
+            background-color: greenyellow;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">
+            <p>1. Raesent ullamcorper dignissim massa eget porta.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

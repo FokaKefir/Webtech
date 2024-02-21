@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        Szelektorok
+    </title>
+    <meta charset="utf-8">
+    <meta name="description" content="Tartalom leírása">
+    <meta name="keywords" content="szó1, szó2, szó3">
+    <style>
+        div {
+            border: 1px solid black;
+            width: 30em;
+        }
+
+        p {
+            padding: 0.2em;
+        }
+
+        /* n. fiú: azokat a paragrafusokat amelyek egy apa elem 1,2,3. fiai  */
+
+        p:nth-child(1) {
+            color: red;
+        }
+
+        p:nth-child(2) {
+            color: green;
+        }
+
+        p:nth-child(3) {
+            color: blue;
+        }
+
+        /* n. fiú ismétlődve: azokat a span elemeket 
+           amelyek egy apa elem k. ha n=1,2,3, ... fiai  
+           */
+
+        span:nth-child(1n) {
+            color: red;
+        }
+
+        span:nth-child(2n) {
+            color: green;
+        }
+
+        span:nth-child(3n) {
+            color: blue;
+        }
+
+        /* azokat a blockquote elemeket amelyek parosak vagy páratlanok
+           az oldalon */
+
+        blockquote:nth-of-type(odd) {
+            color: red;
+        }
+
+        blockquote:nth-of-type(even) {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cikk1">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+    </div>
+    <div>
+        <p>
+            <span>Donec</span>
+            <span>auctor</span>
+            <span>mi</span>
+            <span>nec</span>
+            <span>arcu</span>
+            <span>iaculis</span>
+            <span>fermentum.</span>
+            <span>Integer</span>
+            <span>non</span>
+            <span>varius</span>
+            <span>erat.</span>
+            <span>Praesent</span>
+            <span>molestie,</span>
+            <span>arcu</span>
+            <span>quis</span>
+            <span>laoreet</span>
+            <span>scelerisque,</span>
+            <span>sem</span>
+            <span>erat</span>
+            <span>maximus</span>
+            <span>urna,</span>
+            <span>vitae</span>
+            <span>venenatis</span>
+            <span>lacus</span>
+            <span>lacus</span>
+            <span>in</span>
+            <span>mi.</span>
+            <span>Etiam</span>
+            <span>ornare</span>
+            <span>urna</span>
+            <span>a</span>
+            <span>eros</span>
+            <span>bibendum,</span>
+            <span>eget</span>
+            <span>malesuada</span>
+            <span>massa</span>
+            <span>porttitor.</span>
+            <span>Nunc</span>
+            <span>condimentum</span>
+            <span>quis</span>
+            <span>dolor</span>
+        </p>
+
+    </div>
+
+    <div>
+        <blockquote>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </blockquote>
+        <blockquote>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </blockquote>
+        <blockquote>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </blockquote>
+        <blockquote>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </blockquote>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        Egyszerű példa CSS alkalmazására
+    </title>
+    <style type="text/css">
+        body {
+            font-size: 20pt;
+        }
+
+        #elso {}
+
+        #css {
+            display: inline-block;
+            background-color: #838033;
+            color: #d7d080;
+            font-family: Tahoma, Verdana, Arial;
+            border: red 1px solid;
+            text-shadow: black 0px 0px 5px;
+            font-stretch: ultra-expanded;
+        }
+
+        #css a:link {
+            text-decoration: none;
+            color: #d7d080;
+        }
+
+        #css a:hover {
+            text-decoration: underline;
+            background-color: #d7d080;
+            color: #838033;
+        }
+
+        #css a:visited {
+            text-decoration: none;
+            color: #d7d080;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p id="elso">
+            <a href="#">a</a>
+        </p>
+        <p id="css">
+            <a href="#">a</a>
+        </p>
+    </div>
+</body>
+
+</html>

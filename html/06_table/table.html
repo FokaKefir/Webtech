@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+                         "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Táblázat</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">   
+
+<meta name="Author" content="SzL">
+<meta name="content-language" content="hu">
+<meta name="Identifier-URL" content="http://www.ms.sapientia.ro">
+<meta name="robots" content="index,follow">
+<meta name="description" content="HTML sablon a Transitional dokumentum típushoz.">
+<meta name="keywords" content="HTML, CSS, kurzus">
+
+<link rel="icon" type="image/png" href="icon.gif">
+
+<style type="text/css">
+<!--
+
+
+#tab {
+    width: 400px;
+    background-color: #CCCC99;
+    /* a cellák keretét összevonja , értekei
+                collapse | separate | inherit */
+    border-collapse: separate;
+    border-spacing: 8px;
+
+/*    border-collapse: collapse;*/
+  /*  display: inline-table;*/
+}
+
+#tab th,td {
+    border: 1px solid #663300; /* a cellák köré rajzolt keret */
+       /* ugyanazok az ertekek ervenyesek mint a doboznal */
+    padding: 0.2em;  /* kitoltes */
+    height: 40px;
+    vertical-align: top; 
+}
+
+.masodik  {
+    background-color: tomato !important;
+    vertical-align: bottom !important;
+}
+
+#tab td {
+    text-align: center;
+}
+
+/*a fejlec cellainak hattere mas szinu */
+
+.fejlec th {
+    background-color: #996633;
+    color: white;
+}
+
+/* a caption - cim stilusa */
+
+caption {
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+    font-size: 14 pt;
+    font-variant: small-caps;
+/* hol helyezkedik el es hogyan */
+    caption-side: top;
+    text-align: left;
+}
+
+-->
+</style>        
+
+
+</head>
+<body>
+
+<p>
+<table id="tab" >
+
+<caption >Vizsgaeredmények</caption>
+
+<tr class="fejlec">
+	<th>Jegyek</th><th>Jelenlét</th> 
+	<th>Labor</th> 
+	<th>Házi</th> 
+	<th>Terv</th>
+    <th>Vég</th> 
+</tr>
+<tr>
+	<td>diák1</td><td class="masodik">6</td><td>6</td><td>3</td><td>7</td><td>5.5</td> 
+</tr>
+<tr>
+	<td>diák2</td><td class="masodik">8</td><td>8</td><td>3</td><td>7</td><td>6.5</td> 
+</tr>
+<tr>
+	<td>diák3</td><td>8</td><td>6</td><td>1</td><td>7</td><td>5.5</td> 
+</tr>
+</table>
+Szöveg az inline példához.
+</p>
+
+
+</body>
+</html>

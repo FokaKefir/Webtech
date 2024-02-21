@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>Grid példa</title>
+    <meta charset="utf-8">
+
+    <style type="text/css">
+        /* kiinduló CSS a grid feladathoz */
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-gap: 0.5em;
+            grid-template-areas: "header header header header" "side-left content-1 content-2 side-right" "side-left content-3 content-3 side-right" "footer footer footer footer";
+            width: 900px;
+            height: 300px;
+        }
+
+        .gitem {
+            background-color: lightgray;
+            padding: 2em;
+            border: 1px solid red;
+        }
+
+        .header {
+            grid-area: header;
+        }
+
+        .side-left {
+            grid-area: side-left;
+        }
+
+        .side-right {
+            grid-area: side-right;
+        }
+
+        .content-1 {
+            grid-area: content-1;
+        }
+
+        .content-2 {
+            grid-area: content-2;
+        }
+
+        .content-3 {
+            grid-area: content-3;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+
+        p span {
+            color:forestgreen; font-size: 24pt;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="container">
+        <div class="gitem header">
+            <p>
+                <span>header</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="gitem side-left">
+            <p>
+                <span>side-left</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="gitem content-1">
+            <p>
+                <span>content-1</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="gitem content-2">
+            <p>
+                <span>content-2</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="gitem content-3">
+            <p>
+                <span>content-3</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="gitem side-right">
+            <p>
+                <span>side-right</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="gitem footer">
+            <p>
+                <span>footer</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

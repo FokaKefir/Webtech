@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Box sizing tulajdonság
+        </title>
+        <style type="text/css">
+
+       /* Ha a tartalom box-sizing tulajdonsága az implicit érték
+          ami content-box, akkor a két doboz nem fog elférni egymás
+          mellett az 50% területen, mert az csak a tartalom 
+          szélességet fogja jelenteni.
+          border-box: benne van a padding és border is
+        
+        */     
+
+        #tarto {
+            width: 300px;
+        }
+
+        .tartalom {
+            border: 2px red solid ;
+            margin: 0px;
+            padding: 1em;
+            box-sizing: border-box;
+            width: 50%;
+            float: left;
+        }
+
+        </style>
+    </head>
+    <body>
+      <div id="tarto">
+        <p class="tartalom">
+            Paragrafus
+        </p>
+        <p class="tartalom">
+            Paragrafus
+        </p>
+      </div>
+    </body>
+</html>

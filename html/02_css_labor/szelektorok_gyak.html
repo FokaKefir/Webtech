@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <title>Szelektorok</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Tartalom leírása">
+        <meta name="keywords" content="szó1, szó2, szó3">
+        <style type="text/css">
+         
+         body { font-family: Verdana, Arial, sans-serif;
+                font-size: 14pt;
+                background-color: lightgray;
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+         div { padding: 0.5em;
+                margin: 1em;}       
+         .kiemelt { color: tomato;}       
+         h1, h2 { color: maroon;}
+         #masodik > p { color: green;}
+         .kiemelt + p { color: indianred}
+         #elso, #masodik, #harmadik { border: 1px solid black;}   
+         #harmadik {
+             background-color: lightcoral;
+             border-radius: 1em; 
+         }
+         #masodik > h2 { text-indent: 1.5em;
+        }
+        div p:last-child { font-style: italic;}
+
+        .kiemelt span em { 
+                background-color: lightgreen;
+                margin: 4em;
+                height: 4em;
+                width: 12em;
+                display: inline;}
+
+
+        </style>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div>
+            <div id="elso">
+                <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1> 
+            </div>
+            <div id="masodik">
+                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2> 
+                <p class="kiemelt">Morbi eget <span>venenatis diam. Ut <em>interdum</em> sed odio at</span> interdum. Praesent ac lorem et augue malesuada tempor mollis ut velit. Praesent a velit at libero vehicula faucibus.</p> 
+                <p>Fusce sagittis massa justo, ac consectetur enim porttitor at. Mauris vel est malesuada, scelerisque est ut, venenatis lacus.</p> 
+                <p> Integer mollis condimentum euismod. Mauris vulputate sapien mauris, semper hendrerit massa aliquet vel. Aenean lacus augue, scelerisque eget nisl eget, volutpat posuere felis. Nullam sit amet molestie diam. Vestibulum non ipsum iaculis, ornare turpis eu, dapibus nunc. Pellentesque fermentum mi urna, quis maximus nisl efficitur id. Ut a nisl tortor</p>
+                <p>Ut vel odio vitae mauris faucibus tempor sit amet sit amet nisl. Phasellus consequat arcu sed ornare fringilla.</p>
+            </div>
+
+            <div id="harmadik">
+                <h2>Aenean lacus augue, scelerisque eget nisl eget, volutpat posuere felis.</h2> 
+                <p  class="kiemelt">Nunc ullamcorper, nulla sit amet sagittis pretium, quam purus viverra nisl, a dapibus mauris risus at urna.</p> 
+                <p>Mauris purus metus, molestie consequat consectetur sit amet, lacinia ut velit.</p> 
+                <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus luctus est quis orci porta viverra. Maecenas vitae enim dui. Ut scelerisque, massa et auctor commodo, tortor magna ultricies nunc, eget euismod lacus enim eget enim. Ut pharetra tellus quis convallis varius.</p> 
+            </div>
+        </div>
+    </body>

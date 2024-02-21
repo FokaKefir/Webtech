@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FlexBox 1 példa - a flex elemek tulajdonságai</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        body {
+            margin: 0px; padding: 0px; 
+        }
+        p {
+            padding: 2px;
+        }
+        /* ez lesz a flex doboz */
+        .container {
+            display: flex;
+            flex-direction: row;
+             /* értékek: row, column, row-reverse, column-reverse */
+            flex-wrap: wrap ;  
+                  /* értékek: wrap, nowrap, wrap-reverse */
+
+            /* justify-content: flex-start; */
+                 /* értékek: flex-start,flex-end,center, space-between, space-arounds, pace-evenly */
+
+            /* align-items: flex-start; */
+                 /* értékek:  flex-start, flex-end, center, baseline, stretch */
+            
+            border: 2px solid black;
+            /*width: 500px; */
+            height: 400px;
+        }
+        /* a tartalmazott dobozok mindegyikére lesz egy osztályunk */
+        .elso {
+            background-color: bisque;
+        }
+
+        .masodik {
+            background-color: lightgray;
+        }
+
+        .harmadik {
+            background-color: lightcyan;
+            order: 0;
+        }
+
+        .negyedik {
+            background-color: lightgreen;
+        }
+
+       /* egy tartalmazott doboz alap mérete */  
+        .item {
+            width: 15%; /* a rendelkezésre álló hely 15%-a */
+            height: 20%;
+            border: 2px solid red;
+            box-sizing: border-box;
+            padding: 0.2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="elso item">
+            <p>1. Raesent ullamcorper dignissim massa eget porta.</p>
+        </div>
+        <div class="masodik item">
+            <p>2. Raesent ullamcorper dignissim massa eget porta.</p>
+        </div>
+        <div class="harmadik item">
+            <p>3. Raesent ullamcorper dignissim massa eget porta.</p>
+        </div>
+        <div class="negyedik item">
+            <p>4. Raesent ullamcorper dignissim massa eget porta.</p>
+        </div>
+    </div>
+</body>
+</html>

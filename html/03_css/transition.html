@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      CSS3 transition: átmenetek 
+    </title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Használható CSS3 tulajdonságok" />
+    <meta name="keywords" content="" />
+    <link rel="shortcut icon" href="/~lszabo/icon.gif" />
+    <style type="text/css">
+      #atmenet a:link {
+        /* ha megjelenik a link */
+        padding: 1em;
+        background-color: teal;
+        color: white;
+
+        transition-property: background; /* melyik tulajdonságra alkalmazom */
+        transition-duration: 1.9s; /* mennyi ideig tart */
+        transition-timing-function: ease; /* milyen algoritmust alkalmaz */
+        border-radius: 5px;
+      }
+
+      #atmenet a:hover {
+        /* ha a link fölé viszem az egér mutatót */
+        background-color: tomato;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="atmenet">
+      <a href="#">Átmenetek</a>
+    </p>
+  </body>
+</html>

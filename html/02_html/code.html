@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Preformatált szöveg: pre elem
+        </title>
+    </head>
+    <body>
+        <pre>
+class ISBN {
+
+    function convert($isbn) {
+        $isbn2 = substr("978" . trim($isbn), 0, -1);
+        $sum13 = $this-&gt;genchksum13($isbn2);
+        $isbn13 = "$isbn2$sum13";
+        return ($isbn13);
+    }
+
+    function gettype($isbn) {
+        $isbn = trim($isbn);
+        if (preg_match('%[0-9]{12}?[0-9Xx]%s', $isbn)) {
+            return 13;
+        } else if (preg_match('%[0-9]{9}?[0-9Xx]%s', $isbn)) {
+            return 10;
+        } else {
+            return -1;
+        }
+    }
+
+    function validateten($isbn) {
+        $isbn = trim($isbn);
+        $chksum = substr($isbn, -1, 1);
+        $isbn = substr($isbn, 0, -1);
+        if (preg_match('/X/i', $chksum)) { $chksum="10"; }
+        $sum = $this-&gt;genchksum10($isbn);
+        if ($chksum == $sum){
+            return 1;
+        }else{
+            return 0;
+        }
+    }
+
+</pre>
+    </body>
+</html>

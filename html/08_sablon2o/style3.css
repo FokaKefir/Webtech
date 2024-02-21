@@ -1,0 +1,49 @@
+html, body {
+    margin: 0px; padding: 0px;
+}
+
+
+#jobb {
+    width: 600px;
+    background-color: white;
+    border: 1px solid tomato;
+    background-color: lavender;
+    margin: 20px;  /* pixel */
+} 
+
+p {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 12pt;
+    text-indent: 3em;
+    padding: 0.5em;
+}
+
+
+h1 + p:first-letter { font-size: 20pt ;
+                        color: tomato;
+                       font-weight: bold; 
+    }
+
+
+h1 { 
+     text-align: center; 
+     border-bottom: 2px dotted seagreen;
+     margin: 0.5em;
+     width: 13em;
+     margin-right: 0.5em;
+     margin-left: auto;    
+} 
+
+.idezet {
+    border-left: 4px seagreen solid;
+    padding-left: 1em;
+    border-left: 2px solid seagreen;
+    margin-left: 2em;
+    font-style: italic;
+   
+}
+
+.lebeg_jobbra {
+    float: right;
+    margin: 10px;
+}

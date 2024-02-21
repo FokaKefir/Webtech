@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>Grid példa</title>
+    <meta charset="utf-8">
+
+    <style type="text/css">
+        /* kiinduló CSS a grid feladathoz */
+        body {
+            margin: 0px; padding: 0px; 
+        }
+        p {
+            padding: 2px; margin: 4px;
+            font-size: smaller;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: 8em 8em 8em 8em;
+            grid-template-rows: 8em 8em 8em 8em;
+            grid-gap: 1em;
+        }
+
+        .gitem {
+            background-color: lightgray;
+            padding: 0.5em;
+            border: 1px solid red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="container">
+        <div class="gitem item1">
+            <p>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="gitem item2">
+            <p>2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="gitem item3">
+            <p>3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="gitem item4">
+            <p>4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="gitem item5">
+            <p>5. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="gitem item6">
+            <p>6. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="gitem item7">
+            <p>7. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="gitem item8">
+            <p>8. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

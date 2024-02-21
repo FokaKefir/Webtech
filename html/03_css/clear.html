@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            A clear tulajdonság
+        </title>
+        <style type="text/css">
+        #doboz {
+        width: 350px;
+        /*height: 250px;*/ /* ezt nem adjuk meg! */
+        border: 2px red solid;
+        background: #BFFFBF; /* zold */
+        /*overflow: auto */ /* megoldja */
+        }
+        .clearer {
+        /* a clear  a lebegő alá helyezi az elemet */
+        /* értékei: none left right both */
+        /* clear: both;*/
+        background-color: maroon;
+        }
+        #elso {
+        float: left;
+        margin: 5px;
+        width: 40%;
+        background: #d3dede;
+        padding: 5px;
+        }
+        #masodik {
+        float: right;
+        margin: 5px;
+        width: 40%;
+        background: #d3dede;
+        padding: 5px;
+        }
+        </style>
+    </head>
+    <body style="font-size: large;">
+        <div id="doboz">
+            <p id="elso">
+                A magunk lelte magyarázatok általában jobban meggyőznek
+                bennünket, mint azok, amelyek másoknak jutottak eszükbe.
+            </p>
+            <p id="masodik">
+                A folyók mozgó utak, amelyek célunkhoz vezetnek bennünket.
+            </p>
+            <p class="clearer">
+                Következő paragrafus.
+            </p>
+        </div>
+    </body>
+</html>

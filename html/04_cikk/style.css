@@ -1,0 +1,145 @@
+/*
+    Created on : Feb 15, 2015, 3:51:46 PM
+    Author     : laci
+*/
+html, body {
+    height: 100%;    /* ha azt szeretnénk, hogy az oldal az ablak aljáig nyúljon le 
+                    */
+    font-size: 12pt;  /* alap betűméret és család */
+    font-family: sans-serif; /* a böngésző implicit talpas betűtípusa */
+}
+#holder {
+    width: 960px;     
+    margin-left: auto; margin-right: auto;
+    border: 1px solid teal;
+     
+}
+
+#mysection {
+        height: 100%;   
+}
+
+nav {
+    height: 3em;
+    background-color: bisque;
+}
+
+#header {height: 50px;
+         background-color: lightcoral;
+         padding:1em;
+}
+
+#left {float:left; /* bal oldali tartó */
+    width: 22%;
+    margin: 0.2em;
+}
+
+#main {float:left; /* közép */
+    width: 52%;
+    margin: 0.2em;
+}
+
+#right  {float: right; /* jobb oldali */
+    width: 20%;
+    margin: 0.2em;
+}
+
+#footer { height: 3em;
+    clear: both;
+    background-color: tomato;
+}
+
+h1 { /* főcím */
+    font-family:  Verdana, Tahoma, Kalimati, FreeSans, "Nimbus Sans L", sans-serif;
+    font-size: 24pt;
+    
+}
+
+h2 { /* alcím */
+    font-family:  Verdana, Tahoma, Kalimati, FreeSans, "Nimbus Sans L", sans-serif;
+    font-size: 18pt;
+}
+
+h3 { /* alcím */
+    font-family:  Verdana, Tahoma, Kalimati, FreeSans, "Nimbus Sans L", sans-serif;
+    font-size: 16pt;
+}
+
+pre {
+    font-family: "Courier New", "Nimbus Mono L", "Liberation Mono", monospace;
+      font-size: 11pt;
+}
+
+p { /* betűtípust örökli a body-tól */
+    
+}
+
+#header h1 {
+    text-align: center;
+    line-height: 50px;
+    
+}
+
+aside {  /* a 2 oldalon megjelenő szövegek */
+    border: 1px solid teal;
+    border-radius: 0.4em;
+    margin: 0.2em;
+    background-color: lightgray;
+    padding: 0.2em;
+}
+
+aside h3 {
+    margin-top: 0.4em;margin-bottom: 0.4em;
+}
+
+aside p { /* oldal szövegek paragrafusai */
+    font-size: 11pt;
+    font-style: italic;
+}
+
+#main p {
+    text-indent: 1.2em;
+    margin-top: 1em; margin-bottom: 1em;
+}
+
+#main h1 {
+     
+    margin-top: 0.2em; margin-bottom: 0.2em;
+}
+#main h2 {
+     
+    margin-top: 0.2em; margin-bottom: 0.2em;
+}
+
+#footer p {
+    line-height: 3em;
+    text-align:center;
+}
+
+/* navigáció */
+nav div {
+    line-height: 3em;
+    float: left;  /* a lista egy div elemben van ami lebeg és olyan széles 
+                     mint a benne levő lista */ 
+    width: 100%;
+     
+}
+nav  ul{
+    list-style-type:  none;
+    float: left;       /* lebeg, eltolva jobbra nav elem 50%-ával */
+    position: relative;       
+    left: 50%;
+   
+    }
+
+nav li {
+    display: block; 
+    float: left;
+    position: relative; /* a li elemek vissza vannak tolva az ul elem 50%-ával */
+    right: 50%;     /* így középre kerülnek */
+    }
+
+nav li a {
+    padding: 0.5em;
+    border: 0.5em;
+    }

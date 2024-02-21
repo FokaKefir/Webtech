@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            A Z-index tulajdonság
+        </title>
+        <style type="text/css">
+        body { font-size: 11pt; }
+        #elso {
+        border: 1px solid green;
+        padding: 0px;    
+        margin: 0px;
+        }
+        #para1 {
+        /*  margin: 0px;*/
+        }
+        #para2 {
+        border: 1px solid purple;
+        background: lightgray;
+        /* ha kivesszük az alábbi megjegyzéseket, ez a paragrafus kerül
+        felső szintre - z-index csak pozicionált elemekre alkalmazható,
+        ezért szükséges egy relatív pozíció */
+        /* position: relative; */
+        /* z-index: 2;   */        
+        }
+        #para3 {
+        margin: 0px;
+        color: gray;
+        background: yellow;
+        }
+        #para4 {
+        border: 1px solid purple;
+        position: relative;  /* relatív van pozicionálva */
+        top: -2em;           /* -2em, tehát az eredeti helye fölé */
+                         /* így eltakarja a szürkét: mert ez pozicionálódik
+                             később */
+        background: moccasin;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="elso">
+            <p id="para1">
+                Bevezető paragrafus
+            </p>
+            <p id="para2">
+                Nyugodtan rohanunk a szakadékba is, ha sikerült valamivel
+                eltakarnunk a szemünk elől.(Pascal: Gondolatok, 183)
+            </p>
+            <p id="para4">
+                Nyugodtan rohanunk a szakadékba is, ha sikerült valamivel
+                eltakarnunk a szemünk elől.(Pascal: Gondolatok, 183)
+            </p>
+            <p id="para3">
+                Befejező paragrafus
+            </p>
+        </div>
+    </body>
+</html>

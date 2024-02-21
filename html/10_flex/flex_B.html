@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FlexBox példa - a flex elemek tulajdonságai</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        body {
+            margin: 0px; padding: 0px; 
+        }
+        p {
+            padding: 2px;
+        }
+        .container {
+            display: flex;
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column; */
+             /* értékek: row, column, row-reverse, column-reverse */
+
+            flex-wrap: wrap ;    
+                  /* értékek: wrap, nowrap, wrap-reverse */
+
+            /* justify-content: flex-start; */
+                 /* értékek: flex-start,flex-end,center, space-between, space-arounds, pace-evenly */
+
+            /* align-items: flex-start; */
+                 /* értékek:  flex-start, flex-end, center, baseline, stretch */
+            
+            /* align-content:  flex-start; */
+                /* értékek : flex-start flex-end center space-between space-around space-evenly stretch */
+
+            border: 2px solid black;
+            /*width: 500px; */
+            height: 300px; 
+        }
+
+        .elso {
+            background-color: bisque;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
+            /* order: 0; */
+        }
+
+        .masodik {
+            background-color: lightgray;
+            /* order: 0; */
+        }
+
+        .harmadik {
+            background-color: lightcyan;
+            order: 0;
+        }
+
+        .negyedik {
+            background-color: lightgreen;
+        }
+
+        .otodik {
+            background-color: lightcoral ;
+        }
+
+        .hatodik {
+            background-color:lightyellow ;
+        }
+
+       /* egy doboz alap mérete */  
+        .item {
+            /* flex-grow: 0; */
+            /* flex-shrink: 1; */
+            /* flex-basis: 25%; */
+            /* width: 15%;  */
+            /* height: 20%;  */
+            border: 2px solid red;
+            box-sizing: border-box;
+            padding: 0.2em;
+            /* overflow:hidden; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="elso item">
+            <p>1. Cras at massa quis dolor lacinia lacinia.</p>
+        </div>
+        <div class="masodik item">
+            <p>2. Cras at massa quis dolor lacinia lacinia.</p>
+        </div>
+        <div class="harmadik item">
+            <p>3. Cras at massa quis dolor lacinia lacinia.</p>
+        </div>
+        <div class="negyedik item">
+            <p>4. Cras at massa quis dolor lacinia lacinia.</p>
+        </div>
+        <div class="otodik item">
+            <p>5. Cras at massa quis dolor lacinia lacinia.</p>
+        </div>
+        <div class="hatodik item">
+            <p>6. Cras at massa quis dolor lacinia lacinia.</p>
+        </div>
+    </div>
+</body>
+
+</html>

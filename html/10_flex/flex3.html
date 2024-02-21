@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      FlexBox 3 példa - a flex tartalmazó elem tulajdonságai - shrink
+    </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style type="text/css">
+      .container {
+        display: flex;
+        flex-direction: row;
+        border: 2px solid black;
+        height: 300px;
+        align-items: flex-start;
+      }
+
+      .elso {
+        background-color: bisque;
+        flex: 0 0 auto;
+      }
+
+      .masodik {
+        background-color: lightgray;
+        flex: 1 0 auto;
+      }
+
+      .harmadik {
+        background-color: lightcyan;
+        flex: 0 0 auto;
+      }
+
+      .negyedik {
+        background-color: lightgreen;
+        flex: 0 0 auto;
+      }
+
+      .item {
+        border: 2px solid red;
+        padding: 0.5em;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="elso item">
+        <p>1. Aliquam</p>
+      </div>
+      <div class="masodik item">
+        <p>2. Aliquam</p>
+      </div>
+      <div class="harmadik item">
+        <p>3. Aliquam</p>
+      </div>
+      <div class="negyedik item">
+        <p>4. Aliquam</p>
+      </div>
+    </div>
+  </body>
+</html>

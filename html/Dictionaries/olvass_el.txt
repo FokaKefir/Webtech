@@ -1,0 +1,6 @@
+Spellright dokumentáció itt: https://github.com/bartosz-antosik/vscode-spellright
+
+A .dic és .aff fájlokat tartalmazó Dictionaries könyvtárat a következő helyekre kell tenni:
+
+Windows: %APPDATA%\Code\Dictionaries\
+Linux: ~/.config/Code/Dictionaries/
