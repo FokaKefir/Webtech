@@ -1,0 +1,57 @@
+#elso {
+    height: 150px;
+    background-color: white;
+    border: 2px solid black;
+    position: relative;
+}
+
+#ot {
+    float: right;
+    margin-right: 1em;
+}
+
+#negy {
+    height: 2em;
+    list-style-type: none;
+    background-color: blue;
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+}
+
+#negy li {
+    display: inline;
+    float: left;
+}
+
+#negy a {
+    color: white;
+    margin-left: 0.5em;
+}
+
+
+#ketto {
+    background-color: pink;
+    overflow: auto; 
+}
+
+#ketto .box {
+    float: left;
+    width: 30%; 
+    margin: 0 auto; 
+    box-sizing: border-box; 
+    background-color: greenyellow; 
+    border: 1px solid black; 
+}
+
+#harom {
+    height: 200px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+    background-color: white; 
+    text-align: center; 
+    line-height: 200px;
+    border: 2px solid black;
+}
