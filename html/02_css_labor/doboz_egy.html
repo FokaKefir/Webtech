@@ -19,8 +19,25 @@
             padding: 3em;
             /* box-sizing: border-box; */
             box-sizing: content-box;
-            width: 15em;
+            width: 400px;
             background-color: moccasin;
+            border-radius: 5px;
+            outline: 0.2em green dotted;
+        }
+
+        #ketto {
+            margin: 5em; /* 5em lesz a ketto kozott a tav, mert osszefolyik*/
+            /* margin-top: 10em; */
+            /* display: inline; */ /* inline elemkent viselkedik */
+            /* display: inline-block; */ /* egy vonalba kerul a tobbi elemmel de meg mindig block-ent viselkedik*/
+        }
+
+        #em1 {
+            margin-right: 5em;
+            margin-top: 100px; /* Nem tortenik semmi */
+            display: inline-block;
+            height: 50px;
+            width: 100px;
         }
     </style> 
 </head>
@@ -29,6 +46,11 @@
     <p id="egy">
         Paragrafus
     </p>
+    <p id="ketto">
+        Masodik paragrafus 
+    </p>
+    Lajos
+    <p><em id="em1">harmadik</em> <em>paragrafus</em> szia</p>
 </body>
 
 </html>
