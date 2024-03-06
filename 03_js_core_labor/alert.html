@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <title>A window beépített Be/Ki függvényei</title>
+        <meta charset="utf-8">
+        <meta name="description" content="JavaScript példák">
+
+        <script type="text/javascript">
+
+            function doIt()
+            {
+                let korString = prompt("Írd be az életkorod:");
+                let kor = parseInt(korString, 10);
+                //ha rossz sztringet ír be lehet NaN
+                if (isNaN (kor)) {
+                    alert ('Ismételd meg!');
+                    return
+                }
+                
+                if (kor < 4 || kor > 88) {
+                    let ret = confirm('Viccelsz?'); // OK + Cancel gombok 
+
+                    if (ret) {
+                        kor = "rejtett";
+                    }
+                }
+                alert("Rendben, korod: " + kor);
+
+            }
+
+        </script>
+
+        <style type="text/css">
+        </style>
+
+    </head>
+
+    <body>
+
+        <p onclick="doIt();">Életkor?</p>
+
+    </body>
+</html>

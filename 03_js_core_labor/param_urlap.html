@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>Számokat küldő űrlap</title>
+    <meta charset="utf-8">
+    <meta name="description" content="JavaScript példák">
+
+    <script src="./param_urlap.js"></script>
+
+    <style type="text/css">
+    </style>
+
+</head>
+
+<body>
+
+    <form onsubmit="return calc(this)" method="POST">
+        <label for="param1">Első paraméter</label>
+        <input id="param1" type="text" name="param1" value="" size="5">
+
+        <label for="param2">Második paraméter</label>
+        <input id="param2" type="text" name="param2" value="" size="5">
+        <br>
+        <input type="reset" name="reset" value="Töröl">
+        <input type="submit" name="Ok" value="OK">
+    </form>
+
+    <p id="eredmeny"></p>
+
+</body>
+
+</html>

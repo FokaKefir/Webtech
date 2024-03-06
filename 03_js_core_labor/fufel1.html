@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>Névtelen függvény vagy függvény literál</title>
+    <meta charset="utf-8">
+    <meta name="description" content="JavaScript példák">
+
+    <script src="fufel1.js"></script>
+
+    <!-- itt van a paragrafus módosítást végző függvény: -->
+    <script src="calc.js" type="text/javascript"></script>
+
+    <style type="text/css">
+        p {
+            font-size: 22pt;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+
+        .pm {
+            display: inline-block;
+        }
+
+        #szam p {
+            display: inline-block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="szam">
+        <p class="bevezet" " >Katt a számra:</p>
+        <p  style="color:red; " onclick='calc(this);'>1</p>
+        </div>
+        <div>
+        <p class='pm' onclick='setMinus()'>-</p>
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <p class='pm'>+</p>
+        </div>
+    </body>
+</html>

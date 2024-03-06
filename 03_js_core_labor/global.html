@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>JavaScript példák</title>
+    <meta charset="utf-8">
+    <meta name="description" content="JavaScript példák">
+
+    <!-- script elemben deklarált kód -->
+    <script type="text/javascript"> 
+
+        function elso(s) {
+            var v1 = "Első helló"; //lokális
+            console.log(v1);
+            v2 = "Második helló";  //globális lesz
+            console.log(v2);
+        }
+
+        function masodik(s) {
+            alert(s);
+        }
+
+    </script>
+
+    <style type="text/css">
+    </style>
+
+</head>
+
+<body>
+
+    <!-- a függvények a paragrafusokra való kattintással hívhatóak -->
+
+    <p onclick='elso();'>Beállítás</p>
+    <p onclick='masodik(v1);'>v1 Helló</p>
+    <p onclick='masodik(v2);'>v2 Helló</p>
+
+</body>
+
+</html>

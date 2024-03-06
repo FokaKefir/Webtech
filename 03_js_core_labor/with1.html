@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<title>A with utasítás</title>
+<meta charset="utf-8">
+<meta name="description" content="JavaScript példák">
+  
+
+<script id="js" type="text/javascript" >
+
+//kiszámolja a sin és cos függvényeket
+function teszt ( ) 
+{
+    let val = parseFloat(prompt("Egy számot:"));
+    
+    if ( val == null || isNaN(val)) {  //egyszerűbben:  a  !val   teszt is elég lenne itt
+        alert('Nem szám!');
+        return false;
+    }
+    
+    let s = "";
+
+    with (Math) {
+    
+        s += "Sin: " + sin (val) + "\n";
+        s += "Cos: " + cos (val) ;
+ 
+    }
+
+    alert(s);
+    
+}
+
+</script>
+
+</head>
+
+<body>
+
+
+<p onclick="teszt();">Teszt</p>
+
+</body>
+</html>

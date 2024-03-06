@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>JavaScript példák</title>
+    <meta charset="utf-8">
+    <meta name="description" content="JavaScript példák">
+
+    <!-- script elemben deklarált kód -->
+    <script type="text/javascript"> 
+
+        var a = 2;   //globális változó lesz a window objektumban
+        var b = 3;
+
+        function teszt(s) {
+
+            var b = 4;  //lokális ugyanazzal a névvel felül írja a globálist
+
+            alert("a=" + a + " b=" + b);
+
+        }
+
+
+    </script>
+
+    <style type="text/css">
+    </style>
+
+</head>
+
+<body>
+
+    <p onclick='teszt();'>Teszt</p>
+
+</body>
+
+</html>

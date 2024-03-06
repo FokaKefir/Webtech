@@ -32,16 +32,19 @@
 
 #ketto {
     background-color: pink;
-    overflow: auto; 
+    
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: row;
 }
 
 #ketto .box {
-    float: left;
-    width: 30%; 
-    margin: 0 auto; 
-    box-sizing: border-box; 
     background-color: greenyellow; 
     border: 1px solid black; 
+    margin: 0.5em;
+    flex-grow: 1;
+    flex-basis: 0;
 }
 
 #harom {

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>JavaScript meghívása a böngészőben</title>
+    <meta charset="utf-8">
+    <meta name="description" content="JavaScript példák">
+
+    <!-- script elemben deklarált kód -->
+    <script src="simple.js"></script>
+
+    <style type="text/css">
+    </style>
+
+</head>
+
+<body onload="teszt(s)">
+
+    <!-- eseménykezelővel való hívás -->
+    <p onclick="teszt(s);">Kattintásra meghívható a függvény kódja</p>
+
+    <p>
+        <script>
+            document.write("Lorem faszom");
+        </script>
+    </p>
+
+</body>
+
+</html>
