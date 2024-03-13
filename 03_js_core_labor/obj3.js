@@ -25,3 +25,61 @@ let konyv3 = {
     datum: "2006-11-02",
     ar: 34.64
 }
+
+for (konyv of [konyv1, konyv2, konyv3]) {
+    konyv.szerkeszto = "konyves Bagoly"
+}
+
+konyv1.oldal = 150
+konyv2.oldal = 255
+konyv3.oldal = 302
+
+function paragrafus_konyv(konyv) {
+    const paragraph = `<p>ISBN: ${konyv.isbn}<br>
+                      Szerző: ${konyv.szerzo}<br>
+                      Cím: ${konyv.cim}<br>
+                      Kiadó: ${konyv.kiado}<br>
+                      Kiadási dátum: ${konyv.datum}<br>
+                      Ár: ${konyv.ar}<br>
+                      Oldalszám: ${konyv.oldal || 'Nincs adat'}<br>
+                      Szerkesztő: ${konyv.szerkeszto}</p>`;
+    return paragraph
+}
+
+lista = [konyv1, konyv2, konyv3]
+
+function add_konyvek() {
+    const konyvDiv = document.getElementById('konyvek')
+
+    for (konyv of lista) {
+        konyvDiv.innerHTML += paragrafus_konyv(konyv)
+    }
+}
+
+function ret_konyv(lista, isbn) {
+    for (konyv of lista) {
+        if (konyv.isbn === isbn) {
+            return konyv.ar
+        }
+    }
+    return undefined
+}
+
+
+function tulajdonsag_teszt(tulajd, konyv) {
+    let lst = []
+    for (let i in tulajd) {
+        tul = tulajd[i]
+        if (konyv[tul] == undefined) {
+            lst.push(i)
+        }
+    }
+    if (lst.length == 0)
+        return true
+    return lst
+}
+
+delete konyv2.ar
+delete konyv2.szerzo
+
+tulajd = [ "isbn", "szerzo", "cim", "kiado", "datum", "ar" ]
