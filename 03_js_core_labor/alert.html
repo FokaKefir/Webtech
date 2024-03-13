@@ -28,6 +28,39 @@
 
             }
 
+            function doIt2() {
+                let strNum1 = prompt("num1")
+                let strNum2 = prompt("num2")
+
+                let num1 = parseInt(strNum1, 10)
+                let num2 = parseInt(strNum2, 10)
+
+                if (isNaN(num1) || isNaN(num2)) {
+                    alert("num1 or num2 not an integer")
+                    return
+                }
+
+                let num = num1 + num2
+                alert("num: " + num)
+            }
+
+            function doIt3() {
+                let num = parseFloat(prompt("number: "))
+                if (isNaN(num)) {
+                    alert("lofasz ez nem egy szam")
+                    return
+                }
+
+                numpow3 = Math.pow(num, 3)
+                alert("number on the power of 3: " + numpow3)
+            }
+
+            function doIt4() {
+                let str1 = prompt("str1: ")
+                let str2 = prompt("str2: ")
+                alert(str1 + str2)
+            }
+
         </script>
 
         <style type="text/css">
@@ -38,6 +71,9 @@
     <body>
 
         <p onclick="doIt();">Életkor?</p>
+        <p onclick="doIt2()">Szamok</p>
+        <p onclick="doIt3()">Hatvany</p>
+        <p onclick="doIt4()">Sztringek bazzeg</p>
 
     </body>
 </html>
