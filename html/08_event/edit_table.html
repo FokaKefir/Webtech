@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>JS példák</title>
+    <meta charset="utf-8">
+    <meta name="description" content="JavaScript példák">
+
+    <script src="utils.js"></script>
+    <script src="edit_table.js"></script>
+
+    <style type="text/css">
+        body {
+            font-family: Verdana, Tahoma, Arial, sans-serif;
+        }
+
+        #tab,
+        #tab td,
+        #tab th {
+            border: 1px solid red;
+            border-collapse: collapse;
+            margin: 1em;
+        }
+
+        #tab td,
+        #tab th {
+            width: 4em;
+            text-align: center;
+        }
+
+        caption {
+            font-family: Verdana, Tahoma, Arial, sans-serif;
+            font-size: 10pt;
+            font-variant: small-caps;
+            caption-side: top;
+            text-align: center;
+        }
+
+        #adatok {
+            margin: 1em;
+        }
+
+        #tab #ossz td {
+            background-color: moccasin;
+        }
+
+        #tab tr th {
+            background-color: sienna;
+            color: moccasin
+        }
+
+        #tab tr td:last-child {
+            background-color: moccasin;
+        }
+
+        #tab #ossz td:last-child {
+            background-color: tomato;
+        }
+
+        #msg {
+            margin: 1em;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <form id="adatok">
+        <input id="szamol" type="button" name="számol" value="Számol">
+    </form>
+
+    <div id="tarto">
+        <table id="tab">
+            <caption>Adatok</caption>
+            <tr>
+                <th>Adat 1</th>
+                <th>Adat 2</th>
+                <th>Adat 3</th>
+                <th>Össz</th>
+            </tr>
+
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr id="ossz">
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+
+
+        </table>
+    </div>
+    <p id="msg">&nbsp;</p>
+    <div id="teszt"></div> <!-- csak teszt, nem kell a működéshez -->
+</body>
+
+</html>

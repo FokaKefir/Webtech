@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <title>JS esemény kezelés beállítás - IE < IE9 változat is</title>
+        <meta charset="utf-8">
+        <meta name="description" content="JavaScript példák">
+
+        <script type="text/javascript">
+
+            //az eseményobjektum tulajdonságainak kiírása
+            function kattintas(e)
+            {
+                let s = "Esemény objektum tulajdonságai" ;
+                
+                 s += "esemény típus: " + e.type + "\n";
+                 s += "esemény cél: " + e.target.nodeName + "\n";
+                 s += "kliens X koordináta: " + e.clientX + "\n";
+                 s += "kliens Y koordináta: " + e.clientY + "\n";
+                 s += "egér gomb (0 bal): " + e.button + "\n";
+                 s += "Shift gomb lenyomva: " + e.shiftKey + "\n";
+                 s += "Ctrl gomb lenyomva: " + e.ctrlKey + "\n";
+                 s += "Alt gomb lenyomva: " + e.altKey + "\n";
+                 
+                 
+                alert(s);         
+            }
+
+
+
+             
+
+        </script>
+
+        <style type="text/css">
+        </style>
+
+    </head>
+    <!-- betöltés után a body onload eseménye hívja meg a hozzárendelő függvényt -->
+    <body>
+      <!-- online eseménykezelő esetén event változó -->
+      <p id="para" onclick="kattintas(event)">Paragrafus</p>
+
+    </body>
+</html>

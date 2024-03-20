@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>Esemény terjedés példa</title>
+    <meta charset="utf-8">
+    <meta name="description" content="JavaScript példák">
+
+    <script src="event_bubble3.js"></script>
+
+    <style type="text/css">
+        #tarto {
+            border: 2px solid red;
+        }
+
+        p {
+            width: 30em;
+        }
+    </style>
+
+</head>
+
+<body onload="init();">
+
+    <p>Katintás előtt nyissuk meg a konzol ablakot. Minden paragrafuson van click és doubleclick eseménykezelő, a div elemen csak
+        doubleclick. A doubleclick esemény buborékol, kivéve, ha a 2. paragrafusra kattintunk (event.stopPropagation()).
+    </p>
+
+    <div id="tarto">
+        <p id="para1">Első</p>
+        <p id="para2">Második</p>
+        <p id="para3">Harmadik</p>
+    </div>
+    <p id="show"></p>
+</body>
+
+</html>

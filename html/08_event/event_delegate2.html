@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>JS esemény kezelés beállítás</title>
+            <meta charset="utf-8">
+            <meta name="description" content="JavaScript példák">
+
+            <script src="event_delegate2.js"></script>
+
+            <style type="text/css">
+                #felso {
+                    border: 2px solid red;
+                }
+
+                #also {
+                    border: 2px solid green;
+                }
+
+                p {
+                    width: 30em;
+                }
+            </style>
+
+</head>
+<!-- betöltés után a body onload eseménye hívja meg a hozzárendelő függvényt -->
+
+<body>
+
+    <p>
+        Delegálás példa: Ha az első lista valamelyik elemére kattintunk, megváltozik a színe és vele együtt az alsó lista megfelelő
+        elemének színe is. A műveletet a felső div elem végzi el.
+    </p>
+
+    <div id="felso">
+        <ul>
+            <li>Első</li>
+            <li>Második</li>
+            <li>Harmadik</li>
+        </ul>
+    </div>
+    <div id="also">
+        <ul id="also_lista">
+            <li>Első</li>
+            <li>Második</li>
+            <li>Harmadik</li>
+        </ul>
+    </div>
+</body>
+
+</html>

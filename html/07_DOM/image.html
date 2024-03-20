@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <title>Elemek neve, onmouseout, onmouseover</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="JavaScript példák" />
+
+  </head>
+
+  <body>
+    <div>
+      <img
+        id="kep"
+        src="siraly.jpg"
+        onmouseover='this.src = "siraly1.jpg"'
+        onmouseout='this.src = "siraly.jpg"'
+        onclick="showProperties(this);"
+        title="Sirály"
+        longdesc="https://hu.wikipedia.org/wiki/Sir%C3%A1lyf%C3%A9l%C3%A9k"
+      >
+      <p id="para">A képre kattintva megjelenik az Image elem minden tulajdonsága</p>
+    </div>
+    <script src="image.js"></script>
+  </body>
+</html>
