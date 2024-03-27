@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <title>JS példák</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="JavaScript példák" />
+
+    <script src="utils.js"></script>
+    <script src="button_timer.js"></script>
+
+    <style type="text/css"></style>
+  </head>
+
+  <body>
+    <form id="elso">
+      <input type="text" name="szamlalo" value="0" size="6" disabled />
+      <input type="button" name="start" value="Start" />
+      <input type="button" name="stop" value="Stop" />
+      <input type="checkbox" name="nulla" value="1" selected />
+
+      <span>Kezd nullától</span>
+
+      <span>100 ms</span>
+      <input
+        id="interval"
+        type="range"
+        name="time"
+        min="100"
+        max="3000"
+        step="200"
+      />
+      <span>3000 ms</span>
+    </form>
+  </body>
+</html>
