@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>Választó lista - select</title>
+    <meta charset="utf-8">
+
+    <script type="text/javascript" src="utils.js"></script>
+    <script type="text/javascript" src="select2.js"> </script>
+
+    <style type="text/css">
+        #error {
+            color: red;
+        }
+
+        #kivalasztas {
+            font-style: italic;
+            color: gray;
+        }
+
+        #subres {
+            display: block;
+            padding: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="error">&nbsp;</p>
+    <form id="tesztform" action="https://www.ms.sapientia.ro/~lszabo/internet/action.php" method="POST">
+        <label for="szinek">Színek:
+            <select id="szinek" name="szinek">
+                <option value="valaszt" selected>Válassz egy színt!</option>
+                <option value="red">Piros</option>
+                <option value="blue">Kék</option>
+                <option value="green">Zöld</option>
+            </select>
+        </label>
+
+        <label for="valtozat">Változatok:
+            <select id="valtozat" name="valtozat">
+                <option value="valaszt" selected>Változatok</option>
+            </select>
+        </label>
+
+        <label for="szin">Szín:
+        <input type="color" name="szin" id="szin" value="#ffffff">
+        </label>
+
+    </form>
+
+    <p id="kivalasztas"></p>
+</body>
+
+</html>

@@ -35,7 +35,45 @@ function gomb(e) { // e az eseményobjektum
     kiIr(osszeg);
 }
 
+
+function beallitHaettreszint(e) {
+    e.target.style.backgroundColor = "pink";
+}
+
+function visszaallitHatterszint(e) {
+    e.target.style.backgroundColor = "";
+}
+
+function inputFocus(e) {
+    e.target.style.backgroundColor = "lightgray"
+}
+
+function enterMegnyomasa(e) {
+    if (e.key == "Enter") {
+
+    }
+}
+
+function inputBlur(e) {
+    e.target.style.backgroundColor = "black";
+    sz = Number(e.target.value);
+    if (isNaN(sz)) {
+        e.target.style.backgroundColor = "red";
+    }
+}
+
 //inicializálás  
 window.onload = function () {
     $("#gomb").addEventListener("click", gomb, false);
+
+    let inputs = $$('input[type="text"]');
+    inputs.forEach(input => {
+        input.addEventListener("mouseover", beallitHaettreszint);
+        input.addEventListener("mouseout", visszaallitHatterszint);
+
+        input.addEventListener("focus", inputFocus);
+        input.addEventListener("blur", inputBlur);
+
+        input.addEventListener("keydown", enterMegnyomasa);
+    });
 }

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <title>JS példák</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="JavaScript példák" />
+
+    <script type="text/javascript" src="utils.js"></script>
+    <script type="text/javascript" src="stop_hu.js"></script>
+    <script type="text/javascript" src="text_stat.js"></script>
+
+    <style type="text/css">
+      body {
+        font-family: Verdana, Tahoma, Kalimati, FreeSans, "Nimbus Sans L",
+          sans-serif;
+        font-size: 11pt;
+      }
+
+      p,
+      .control,
+      form {
+        margin: 0.5em;
+      }
+
+      #bal {
+        width: 30em;
+        border: 1px solid red;
+        border-radius: 0.5em;
+        padding: 1em;
+        float: left;
+      }
+
+      #jobb {
+        width: 20em;
+        border: 1px solid red;
+        border-radius: 0.5em;
+        float: left;
+        margin-left: 2em;
+      }
+
+      .control {
+        display: block;
+      }
+
+      #statlist li {
+        list-style-type: none;
+      }
+
+      #jobbform label {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="bal">
+      <form
+        id="textf"
+        action="https://www.ms.sapientia.ro/~lszabo/internet/action.php"
+        method="POST"
+      >
+        <textarea
+          lang="hu"
+          name="message"
+          id="message"
+          rows="20"
+          cols="50"
+          autofocus
+          placeholder="Ide gépelj!"
+        ></textarea>
+
+        <span class="control">
+          <input type="button" name="stat" id="stat" value="Statisztika" />
+          <input type="reset" name="Törlés" id="torles" value="Törlés" />
+          <input type="submit" name="Mehet" value="Mehet" />
+        </span>
+      </form>
+    </div>
+
+    <div id="jobb">
+      <p>Szöveg statisztika</p>
+      <!-- ide jön a lista a statisztikával -->
+      <ul id="statlist"></ul>
+      <!-- ide jönnek  a gyakori szavak felsorolva" -->
+      <form id="jobbform">
+        <label for="stopcheck"
+          >Stop szavak nélkül
+          <input type="checkbox" name="stopcheck" id="stopcheck" value="1" />
+        </label>
+        <label for="szoszam"
+          >Látható:
+          <input typ="text" name="szoszam" id="szoszam" value="30" size="3" />
+          <span>szó </span>
+        </label>
+      </form>
+      <p id="gyak"></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <title>Választó lista - select</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="utils.js"></script>
+    <script type="text/javascript" src="megyek.js"></script>
+    <style type="text/css">
+
+      fieldset { width: 301px; }
+
+    </style>
+  </head>
+  <body>
+    <p id="error"></p>
+    <form id="tesztform" action="https://www.ms.sapientia.ro/~lszabo/internet/action.php" method="POST" enctype="multipart/form-data">
+      <label for="megye">Válassza ki a listából:
+      </label>
+        <select id="megye" name="megye">
+        </select>
+
+      <div>
+        <input class="gomb" type="reset" name="reset" value="Törlés">
+        <input class="gomb" type="submit" name="go" value="Küldd">
+      </div>
+    </form>
+  </body>
+</html>

@@ -11,10 +11,20 @@ function movePara(e) {
   const N = para.length;
 
   //itt folytatni
+  para[current].style.display = "none";
+
+  if (name == "next"){
+    current = (current + 1) % N;
+  } else if (name == "prev") {
+    current = (current - 1 + N) % N;
+  }
+  para[current].style.display = 'block'
 }
 
 window.onload = function () {
   var f = $("#gombok");
   f.next.addEventListener("click", movePara, false); //mindkét gombra tehetjük ugyanazt
   f.prev.addEventListener("click", movePara, false); //vagy ezt törölhetjük, és írhatunk két külön függvényt
+  movePara();
+
 };

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+
+  <title>HTML 5 input elemek</title>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="utils.js"></script>
+  <script src="html5_tel_validate.js"></script>
+
+  <style>
+    #errmsg {
+      color: white;
+      background-color: tomato;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form id="elso" novalidate action="https://www.ms.sapientia.ro/~lszabo/internet/action.php" method="POST">
+
+
+    <legend>
+      <span>Telefonszám:</span>
+      <input type="tel" name="tel" id="tel" required autofocus 
+                                 placeholder="999999999" pattern="\d{9}"
+                                  >
+      <span id="errmsg"></span>
+    </legend>
+
+    <input type="submit" name="ok" value="ok">
+
+  </form>
+
+
+</body>

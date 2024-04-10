@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>JS példák : szöveges mezők ellenőrzése</title>
+    <meta charset="utf-8">
+    <meta name="description" content="JavaScript példák">
+
+    <script src="utils.js"></script>
+
+    <script src="./form_text_e.js"></script>
+
+    <style type="text/css">
+        #hiba {
+            color: red;
+        }
+        form * {
+            margin: 0.3em;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <p id="hiba">&nbsp;</p>
+    <form id="elso" action="https://www.ms.sapientia.ro/~lszabo/internet/action.php" method="POST">
+
+        <label for="login">Login név </label>
+        <input type="text" name="login" id="name" value="">
+        <span>legalább 6 kis betű vagy számjegy</span>
+
+        <br>
+
+        <label for="telszam">Telefonszám</label>
+        <input type="text" name="telszam" id="telszam" value="">
+        <span>tel.szám formátuma: 0999-999-999</span>
+
+        <br>
+
+        <label for="noname">Nem fontos mező</label>
+        <input type="text" name="noname" id="noname" value="">
+        <span>ez a mező nem lesz ellenőrizve</span>
+
+        <br>
+
+        <br>
+        <input type="reset" name="Törlés" value="Törlés">
+        <input type="submit" name="Mehet" value="Mehet">
+
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Űrlap példák</title>
+    <meta charset="utf-8">
+
+    <script src="utils.js"></script>
+    <script src="radio_js.js"></script>
+
+    <style type="text/css">
+        fieldset {
+            display: inline;
+        }
+
+        input[type=submit] {
+            display: block;
+        }
+
+        fieldset span {
+            display: block;
+        }
+
+        #error {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <p id="error">&nbsp;</p>
+    <!-- ide kerül a hiba üzenet -->
+
+    <form id="adatok" action="https://www.ms.sapientia.ro/~lszabo/internet/action.php" method="POST">
+        <fieldset>
+            <label for="nev">Név:</label>
+            <input type="text" name="nev" id="nev" value="">
+            <label for="leanykori_nev">Leanykori név:</label>
+            <input type="text" name="leanykori_nev" id="leanykori_nev" disabled>
+
+            <span>Nem</span>
+
+            <label for="nem1">Nő:</label>
+            <input id="nem1" type="radio" name="nem" value="N">
+            <label for="nem2">Férfi</label>
+            <input id="nem2" type="radio" name="nem" value="F" checked>
+
+        </fieldset>
+
+        <input type="submit" name="elkuld" value="Elküld">
+    </form>
+</body>

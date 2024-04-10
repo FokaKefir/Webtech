@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>JS példák</title>
+    <meta charset="utf-8">
+    <meta name="description" content="JavaScript példák">
+
+    <script src="utils.js"></script>
+
+    <script src="./form_e.js"></script>
+
+    <style type="text/css">
+        #tarto {
+            position: relative;
+        }
+
+        #hiba,
+        .red {
+            color: red;
+        }
+
+        .blk {
+            margin-top: 1em;
+        }
+
+        .format {
+            display: block;
+            position: relative;
+            margin: 1em;
+        }
+
+        label input {
+            position: absolute;
+            left: 16em;
+        }
+
+        label span {
+            position: absolute;
+            left: 34em;
+        }
+
+        #passwd_err {
+            display: none;
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="tarto">
+        <p id="hiba">&nbsp;</p>
+        <form id="elso" action="https://www.ms.sapientia.ro/~lszabo/internet/action.php" method="POST">
+            <span class="format">
+                <label>Név
+                    <input type="text" name="nev" value="">
+                    <span>Vezetéknév, keresztnév szóközzel elválasztva</span>
+                </label>
+            </span>
+
+            <span class="format">
+                <label>E-mail
+                    <input type="text" name="email" value="">
+                    <span>E-mail cím</span>
+                </label>
+            </span>
+
+
+            <span class="format">
+                <label>Jelszó
+                    <input type="password" name="jelszo" value="">
+                    <span>A jelszó legalább 8 karakter: kis és nagybetű, számjegy van benne</span>
+                </label>
+            </span>
+
+            <span class="format">
+                <label>Jelszó még egyszer
+                    <input type="password" name="jelszo1" value="">
+
+                    <span id="passwd_err">A két jelszó nem egyezik</span>
+                </label>
+            </span>
+
+            <span class="format">
+                <label>Fogadok reklám leveleket
+                    <input type="checkbox" name="reklam" value="1" checked>
+                    <span>Így tudjuk Önt legújabb felesztéseinkről értesíteni</span>
+                </label>
+            </span>
+
+            <span class="format">
+                <label>Feltételek elfogadása
+                    <input type="checkbox" name="feltetel" value="1">
+                    <span>A felhasználási feltételeket kötelező elfogadni</span>
+                </label>
+            </span>
+
+
+            <span class="format">
+                <input type="reset" name="Törlés" value="Törlés">
+                <input type="submit" name="Mehet" value="Mehet">
+            </span>
+
+        </form>
+    </div>
+</body>
+
+</html>
