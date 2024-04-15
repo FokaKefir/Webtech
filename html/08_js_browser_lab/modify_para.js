@@ -57,19 +57,52 @@ function ctrlShiftKey(para)
 
 }
 
+function altKey(para) {
+    if (confirm("Biztosan törölni szeretné ezt a bekezdést?")) {
+        para.remove();
+    }
+}
+
+function altShiftKey(para) {
+    // Create a new empty paragraph element
+    let newPara = document.createElement("p");
+    // Insert the new paragraph before the clicked paragraph
+    para.parentNode.insertBefore(newPara, para);
+    // Make the new paragraph editable and set its background color
+    newPara.contentEditable = "true";
+    newPara.style.backgroundColor = "lightyellow";
+    // Focus on the new paragraph to enable text input
+    newPara.focus();
+
+    // Add blur event listener to stop editing when the paragraph loses focus
+    newPara.onblur = function () {
+        newPara.contentEditable = "false";
+        newPara.style.backgroundColor = "";
+        newPara.onblur = null;
+    };
+}
+
 //click eseménykezelő
 function click(e) {
     let para=e.target;
     
-    if(e.ctrlKey && !e.shiftKey){
+    if (e.altKey && e.shiftKey && !e.ctrlKey) {
+        altShiftKey(para);
+        return;
+    }
+    if (e.altKey && !e.shiftKey && !e.ctrlKey) {
+        altKey(para);
+        return;
+    }
+    if (e.ctrlKey && !e.shiftKey && !e.altKey) {
         ctrlKey(para);
         return;
     }
-    if(!e.ctrlKey && e.shiftKey){
+    if (!e.ctrlKey && e.shiftKey && !e.altKey) {
         shiftKey(para);
         return;
     }
-    if(e.ctrlKey && e.shiftKey){
+    if (e.ctrlKey && e.shiftKey && !e.altKey) {
         ctrlShiftKey(para);
         return;
     }

@@ -12,11 +12,23 @@ let savedCell = null;
 // HTML kezelők
 //--------------------
 
+
 //HTML táblázat előállító a labor gyakorlathoz
 //alapból nincs felhasználva, a HTML-ben megadott táblázatot
 //használjuk
 function createTable(id, rows, cols, caption) {
-  //táblázat HTML kezdő sztring
+  // Ellenőrizzük, hogy rows és cols egész számok és legalább 1-es értékűek
+  if (
+    !Number.isInteger(rows) ||
+    !Number.isInteger(cols) ||
+    rows < 1 ||
+    cols < 1
+  ) {
+    console.error("rows vagy cols nem egész szám vagy <1");
+    return false;
+  }
+
+  // Táblázat HTML generálása
   let tablestr =
     '<table id="' +
     id +
@@ -26,49 +38,33 @@ function createTable(id, rows, cols, caption) {
     "</caption>\n" +
     "<tbody>\n";
 
-  if (
-    rows !== parseInt(rows) ||
-    cols !== parseInt(cols) ||
-    rows < 1 ||
-    cols < 1
-  ) {
-    console.error("rows vagy cols nem egész szám vagy <1");
-    return false;
-  }
-
-  //táblázat fejléc adatait generáló függvény
-  //n oszlopszám
-  function header(n) {
-    return "Adat " + n;
-  }
-
-  //egy sort generál N darab th vagy td elemmel
-  //element: <td> vagy <th>
-  //content: mi a cellák tartalma: egy szám, sztring
-  //         vagy függvény ami beír a cellába generáláskor
+  // Egy sor celláinak generálása
   function createRow(N, element, content) {
-    let rowstr = "<tr>"; //kezdő tr
+    let rowstr = "<tr>"; // Kezdő tr
     for (let k = 0; k < N; k++) {
       rowstr += element;
       if (typeof content === "function") {
-        rowstr += content(k + 1); //ha egy függvény
+        rowstr += content(k + 1); // Ha egy függvény
       } else {
-        rowstr += content; //ha egy szám vagy sztring
+        rowstr += content; // Ha egy szám vagy sztring
       }
       rowstr += element.replace(/</, "</"); // </td>
     }
     return rowstr + "</tr>\n";
   }
-  //fejléc
-  tablestr += createRow(cols, "<th>", header);
+
+  // Fejléc
+  tablestr += createRow(cols, "<th>", (n) => "Adat " + n);
+  // Sorok generálása
   for (let k = 0; k < rows; k++) {
     tablestr += createRow(cols, "<td>", 0);
   }
-  //vége
+  // Vége
   tablestr += "</tbody>\n</table>";
   console.log(tablestr);
   return tablestr;
 }
+
 
 //üzenet kiíró, ha error true akkor hiba üzenet
 function message(str, error) {
@@ -96,35 +92,21 @@ function message(str, error) {
 //elvégzi a táblázat sorainak és oszlopainak összeadását
 function szamol(e) {
   let T = $("tab");
-  let rows = T.rows; //a táblázat sorai
+  let rows = Array.from(T.rows);
 
-  let cellNo; //hány cella oszlop van
+  // Sorok összegének számítása
+  rows.forEach(row => {
+    let cells = Array.from(row.cells);
+    let sum = cells.slice(0, -1).reduce((acc, cell) => acc + parseFloat(cell.textContent), 0);
+    cells[cells.length - 1].textContent = sum;
+  });
 
-  //sor végi összegek számítása
-  for (let rx = 1; rx < rows.length - 1; rx++) {
-    //bejár egy sort
-    //egy sor cellái:
-    let cells = rows[rx].cells;
-    let sum = 0;
-    for (let cx = 0; cx < cells.length - 1; cx++) {
-      sum += parseFloat(cells[cx].textContent);
-    }
-    //eredmény beírása a cellába
-    cells[cells.length - 1].textContent = "" + sum;
-    //kimentjük a cellák számát
-    cellNo = cells.length;
-  }
-
-  //oszlop összegek számítása
-  for (let cx = 0; cx < cellNo; cx++) {
-    let sum = 0;
-    for (let rx = 1; rx < rows.length - 1; rx++) {
-      //console.log("cx=" + cx + " rx=" + rx)
-      sum += parseFloat(rows[rx].cells[cx].textContent);
-    }
-    rows[rows.length - 1].cells[cx].textContent = "" + sum;
-    //console.log(sum)
-  }
+  // Oszlopok összegének számítása
+  let cols = Array.from(T.rows[0].cells);
+  cols.forEach((col, colIndex) => {
+    let sum = rows.slice(0, -1).reduce((acc, row) => acc + parseFloat(row.cells[colIndex].textContent), 0);
+    T.rows[T.rows.length - 1].cells[colIndex].textContent = sum;
+  });
 
   message("Újra számolva");
 }
@@ -222,20 +204,29 @@ function blur(e) {
   elem.style.backgroundColor = "inherit";
 }
 
+function generateNewTable() {
+  let rowsInput = parseInt(document.getElementById("rowsInput").value);
+  let colsInput = parseInt(document.getElementById("colsInput").value);
+  let newTable = createTable("tab", rowsInput, colsInput, "Adatok");
+  document.getElementById("tarto").innerHTML = newTable;
+}
+
+// Ne engedélyezzünk újsor karaktereket a cellákba
 function key(e) {
-  console.log("keydown esemény");
+  if (e.key === "Enter") {
+    e.preventDefault();
+    e.target.blur(); // Az újsor gombnyomásnak a blur eseménnyel való ekvivalenciája
+  }
 }
 
 //eseménykezelők beállítása
 window.onload = function () {
-  let T = $("tab"); //a táblázat elem
+  let T = $("tab");
 
   T.addEventListener("click", click, false);
-
-  //a Számol gomb
   $("szamol").addEventListener("click", szamol, false);
+  T.addEventListener("keydown", key, false); // Keydown esemény hozzáadása
+  $("newTableButton").addEventListener("click", generateNewTable); // Új táblázat gomb eseménykezelője
+  document.addEventListener("blur", blurCapturing, true);
 
-  //az alábbi kettő nem része a feladatnak
-  T.addEventListener("keydown", key, false);
-  T.addEventListener("blur", blurCapturing, true);
 };

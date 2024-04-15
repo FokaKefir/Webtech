@@ -50,7 +50,48 @@ function inputFocus(e) {
 
 function enterMegnyomasa(e) {
     if (e.key == "Enter") {
+        let form = this.form; //a this a button elemre mutat
+                    //minden input elemen van egy form nevű referencia
+                    //az őt tartalmazó űrlapra
 
+        let sz1 = Number(form.szam1.value); // a két szám konvertálva
+        let sz2 = Number(form.szam2.value);
+
+        let op = String(form.operation.value);
+
+        if (isNaN(sz1) || isNaN(sz2)) {
+            kiIr("Az egyik bemenet nem szám!");
+            return false;
+        }
+
+        if (!"+-/*".includes(op)) {
+            kiIr("Nem megfelelo operator")
+            return false
+        }
+
+        switch (op) {
+            case "+":
+                res = sz1 + sz2
+                break;
+        
+            case "-":
+                res = sz1 - sz2
+                break;
+
+            case "*":
+                res = sz1 * sz2
+                break;
+        
+            case "/":
+                if (sz2 == 0) {
+                    kiIr("0-val nem lehet osztani");
+                    return false;
+                }
+                res = sz1 / sz2;
+                break;
+        }
+        
+        kiIr(res);
     }
 }
 
@@ -64,7 +105,7 @@ function inputBlur(e) {
 
 //inicializálás  
 window.onload = function () {
-    $("#gomb").addEventListener("click", gomb, false);
+    //$("#gomb").addEventListener("click", gomb, false);
 
     let inputs = $$('input[type="text"]');
     inputs.forEach(input => {
