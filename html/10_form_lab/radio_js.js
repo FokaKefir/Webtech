@@ -2,16 +2,15 @@
 //a függvény mindkét rádió gombot kiszolgálja
 function valtozas(e) {
   //a this a megkattintott gombra referencia
-  if (
-    (this.value == "F" && this.checked) ||
-    (this.value == "N" && !this.checked)
-  ) {
+  let nemNo = $('#nem1').checked;
+  let hazas = $('#hazas').checked;
+  if (nemNo && hazas) {
+    //nő
+    this.form.leanykori_nev.disabled = false;
+  } else {
     //férfi: //ha Az F gomb kiválasztva vagy N nem kiválasztva
     this.form.leanykori_nev.disabled = true;
     this.form.leanykori_nev.value = ""; //ha előzőleg kitöltötte
-  } else {
-    //nő
-    this.form.leanykori_nev.disabled = false;
   }
 }
 
@@ -46,6 +45,7 @@ window.onload = function () {
   //mindkettőre ugyanazt a kezelőt tesszük
   r[0].addEventListener("change", valtozas, true);
   r[1].addEventListener("change", valtozas, true);
+  $('#hazas').addEventListener("change", valtozas, true);
 
   //elküldés előtti ellenőrzés
   $("#adatok").addEventListener("submit", ellenoriz, true);
