@@ -85,7 +85,14 @@ function generateNewTable() {
   let rowsInput = parseInt(document.getElementById("rowsInput").value);
   let colsInput = parseInt(document.getElementById("colsInput").value);
   let newTable = createTable("tab", rowsInput, colsInput, "Adatok");
-  document.getElementById("tarto").innerHTML = newTable;
+  $("#tarto").innerHTML = newTable;
+
+  let T = $("#tab"); //a táblázat elem
+  T.addEventListener("click", click, false);
+  T.addEventListener("keydown", key, false);
+  T.addEventListener("blur", blurCapturing, true);
+
+
 }
 
 //üzenet kiíró, ha error true akkor hiba üzenet
@@ -119,7 +126,7 @@ function szamol(e) {
   // Sorok összegének számítása forEach és reduce függvényekkel
   rows.forEach(row => {
     let cells = Array.from(row.cells); // A cellákat tömbbé alakítjuk
-    let sum = cells.reduce((acc, cell) => {
+    let sum = cells.slice(0, -1).reduce((acc, cell) => {
       return acc + parseFloat(cell.textContent || 0); // A cella tartalmát összeadjuk, figyelembe véve az esetleges üres cellákat is
     }, 0);
     row.cells[row.cells.length - 1].textContent = sum; // Az összeg beírása az utolsó cellába a sorban
