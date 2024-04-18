@@ -46,8 +46,15 @@ function createTable(id, rows, cols, caption) {
   //element: <td> vagy <th>
   //content: mi a cellák tartalma: egy szám, sztring
   //         vagy függvény ami beír a cellába generáláskor
-  function createRow(N, element, content) {
+  function createRow(N, element, content, id) {
     let rowstr = "<tr>"; //kezdő tr
+    if (id !== undefined) {
+      rowstr = "<tr id=" + id + ">";
+    }
+
+    if (typeof content !== "function") {
+      N++;
+    }
     for (let k = 0; k < N; k++) {
       rowstr += element;
       if (typeof content === "function") {
@@ -57,6 +64,9 @@ function createTable(id, rows, cols, caption) {
       }
       rowstr += element.replace(/</, "</"); // </td>
     }
+    if (typeof content === "function") {
+      rowstr += element + "Össz" + element.replace(/</, "</");
+    }
     return rowstr + "</tr>\n";
   }
   //fejléc
@@ -64,10 +74,18 @@ function createTable(id, rows, cols, caption) {
   for (let k = 0; k < rows; k++) {
     tablestr += createRow(cols, "<td>", 0);
   }
+  tablestr += createRow(cols, "<td>", "&nbsp;", "ossz")
   //vége
   tablestr += "</tbody>\n</table>";
   console.log(tablestr);
   return tablestr;
+}
+
+function generateNewTable() {
+  let rowsInput = parseInt(document.getElementById("rowsInput").value);
+  let colsInput = parseInt(document.getElementById("colsInput").value);
+  let newTable = createTable("tab", rowsInput, colsInput, "Adatok");
+  document.getElementById("tarto").innerHTML = newTable;
 }
 
 //üzenet kiíró, ha error true akkor hiba üzenet
@@ -96,35 +114,29 @@ function message(str, error) {
 //elvégzi a táblázat sorainak és oszlopainak összeadását
 function szamol(e) {
   let T = $("#tab");
-  let rows = T.rows; //a táblázat sorai
+  let rows = Array.from(T.rows).slice(1); // A sorokat tömbbé alakítjuk
 
-  let cellNo; //hány cella oszlop van
+  // Sorok összegének számítása forEach és reduce függvényekkel
+  rows.forEach(row => {
+    let cells = Array.from(row.cells); // A cellákat tömbbé alakítjuk
+    let sum = cells.reduce((acc, cell) => {
+      return acc + parseFloat(cell.textContent || 0); // A cella tartalmát összeadjuk, figyelembe véve az esetleges üres cellákat is
+    }, 0);
+    row.cells[row.cells.length - 1].textContent = sum; // Az összeg beírása az utolsó cellába a sorban
+  });
 
-  //sor végi összegek számítása
-  for (let rx = 1; rx < rows.length - 1; rx++) {
-    //bejár egy sort
-    //egy sor cellái:
-    let cells = rows[rx].cells;
-    let sum = 0;
-    for (let cx = 0; cx < cells.length - 1; cx++) {
-      sum += parseFloat(cells[cx].textContent);
-    }
-    //eredmény beírása a cellába
-    cells[cells.length - 1].textContent = "" + sum;
-    //kimentjük a cellák számát
-    cellNo = cells.length;
-  }
-
-  //oszlop összegek számítása
-  for (let cx = 0; cx < cellNo; cx++) {
-    let sum = 0;
-    for (let rx = 1; rx < rows.length - 1; rx++) {
-      //console.log("cx=" + cx + " rx=" + rx)
-      sum += parseFloat(rows[rx].cells[cx].textContent);
-    }
-    rows[rows.length - 1].cells[cx].textContent = "" + sum;
-    //console.log(sum)
-  }
+  // Oszlopok összegének számítása
+  let cols = Array.from(T.rows[0].cells);
+  cols.forEach((col, colIndex) => {
+    let sum = rows.slice(0, -1).reduce((acc, row) => {
+      let value = parseFloat(row.cells[colIndex].textContent);
+      if (!isNaN(value)) {
+        acc += value;
+      }
+      return acc;
+    }, 0);
+    T.rows[T.rows.length - 1].cells[colIndex].textContent = sum;
+  });
 
   message("Újra számolva");
 }
@@ -223,7 +235,11 @@ function blur(e) {
 }
 
 function key(e) {
-  console.log("keydown esemény");
+  if (e.key === "Enter") {
+    e.preventDefault();
+    e.target.blur(); // Az újsor gombnyomásnak a blur eseménnyel való ekvivalenciája
+    szamol();
+  }
 }
 
 //eseménykezelők beállítása
@@ -234,6 +250,7 @@ window.onload = function () {
 
   //a Számol gomb
   $("#szamol").addEventListener("click", szamol, false);
+  $("#newTableButton").addEventListener("click", generateNewTable, false)
 
   //az alábbi kettő nem része a feladatnak
   T.addEventListener("keydown", key, false);
