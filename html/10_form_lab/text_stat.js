@@ -34,13 +34,17 @@ function stat(text) {
   res.szavak = szavak.length;
   console.log(res, szavak);
 
-  return gyak;
+  return res;
 }
 
 //eseménykezelő
 function calcStat(e) {
   let text = $("#message").value;
   let res = stat(text);
+  let statlist = $("#statlist")
+  statlist.innerHTML = `<li> szavak: ${res.szavak} </li>` + 
+    `<li> karakterek: ${res.kar} </li>` + 
+    `<li> sorok: ${res.sorok} </li>`
 }
 
 //
