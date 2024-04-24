@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Express példák</title>
+  <meta charset="utf-8">
+
+</head>
+
+<body>
+
+  <form id="elso" name="elso" action="/form" method="POST">
+
+    <fieldset>
+      <fieldset id="set1">
+        <legend>Minta űrlap</legend>
+
+        <!-- text -->
+
+        <div class="szovegmezok mezo">
+          <label>Írjon be egy szöveget:
+            <input type="text" name="szoveg" id="idszoveg" value="" maxlength="100" size="30">
+          </label>
+          <br>
+          <label>Írja be a jelszót:
+            <input type="password" name="jelszo" id="idjelszo">
+          </label>
+
+        </div>
+
+        <!-- select -->
+        <div class="kivalaszt mezo">
+          <label for="idszinek">Válassza ki a listából:
+          </label>
+          <select name="szinek" id="idszinek">
+            <option value="piros" selected>Piros</option>
+            <option value="kék">Kék</option>
+            <option value="zöld">Zöld</option>
+            <option value="sárga">Sárga</option>
+          </select>
+        </div>
+
+        <!-- radio -->
+        <div class="mezo">
+          <span>Válasszon egy színt</span>
+          <label for="idpiros">Piros
+          </label>
+          <input type="radio" name="szingomb" id="idpiros" value="piros" checked>
+          <label for="idkek">Kék
+          </label>
+          <input type="radio" name="szingomb" id="idkek" value="kek">
+        </div>
+        <!-- checkbox-->
+        <label>Négyzet:
+          <input type="checkbox" name="negyzet" value="1">
+        </label>
+        <input type="checkbox" name="negyzet" value="2">
+
+        <!-- textarea -->
+        <br>
+        <label for="idszovegmezo">Írjon be egy hosszabb szöveget:
+        </label>
+        <textarea class="szoveg" cols="30" rows="10" name="szovegmezo" id="idszovegmezo"></textarea>
+
+      </fieldset>
+
+      <div>
+        <input class="gomb" type="reset" name=reset value="Törlés">
+        <input class="gomb" type="submit" name=go value="Küldd">
+      </div>
+    </fieldset>
+
+  </form>
+</body>
+
+</html>

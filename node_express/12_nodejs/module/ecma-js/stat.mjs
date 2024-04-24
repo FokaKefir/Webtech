@@ -1,0 +1,36 @@
+//ECMAScript standard szerinti modul
+
+//itt csak függvények lesznek az export-ban, de lehetnek
+//let, const, var változók is
+
+//ez a függvény nem kerül az exports tulajdonságba
+//így nem lesz látható azokban a szkriptekben
+//ahol használjuk a modult
+function checkNum(num){
+    if ( ! Number.isFinite(num) ){
+      throw new Error(`${num} nem szám`);
+    }
+}
+
+
+//átlagot számít a paraméterként kapott számokból
+//export kulcsszó a függvény előtt
+export function mean(...para){
+  let sum = para.reduce ((acc, num)=>{
+    checkNum(num);
+    return acc + num;
+  },0)
+  return sum / para.length;
+} 
+
+////korrigált tapasztalati szórás
+//// sqrt ( (E (( X - E(X))**2)) / N)
+export function std(...para){
+  let m = mean (...para);
+  let sumSq = para.reduce ((acc,num)=>{
+    checkNum(num);
+    return acc + Math.pow(num-m,2);
+  },0);  
+  return Math.sqrt(sumSq/(para.length-1));
+}
+
