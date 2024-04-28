@@ -6,12 +6,19 @@
 //3. kiíró függvények: a kiszámolt értékeket a kimenetre írják
 
 //kiírja a statisztikákat
-function kiir(res) {
+function kiir(res, szoszam) {
+  statout = ""
 
+  for (let i = 0; i < Math.min(res.gyak.length, szoszam); i++) {
+    const element = res.gyak[i];
+    statout += `${element[0]} (${element[1]}),\n`
+  }
+
+  $("#gyak").innerHTML = statout
 }
 
 //kiszámolja a statisztikákat
-function stat(text) {
+function stat(text, stop) {
   let res = {
     kar: 0,
     sorok: 0,
@@ -31,8 +38,21 @@ function stat(text) {
 
   let textc = text.replace(/[-.,:;'"„”!()\[{}\]]/g, " ");
   let szavak = textc.split(/\s+/);
-  res.szavak = szavak.length;
+  res.szavakSzama = szavak.length;
+  res.szavak = szavak
   console.log(res, szavak);
+
+  let szavakDict = {};
+  for (const szo of szavak) {
+    if (szo in szavakDict) {
+      szavakDict[szo]++;
+    } else if (stop === false || (stop === true && !(szo in hu_stop))) {
+      szavakDict[szo] = 1;
+    }
+  }
+
+  res.gyak = Object.entries(szavakDict)
+  res.gyak.sort((a, b) => b[1] - a[1]);
 
   return res;
 }
@@ -40,11 +60,20 @@ function stat(text) {
 //eseménykezelő
 function calcStat(e) {
   let text = $("#message").value;
-  let res = stat(text);
+  let stop = false;
+  if ($("#stopcheck").checked) {
+    stop = true;
+  }
+
+  let res = stat(text, stop);
   let statlist = $("#statlist")
-  statlist.innerHTML = `<li> szavak: ${res.szavak} </li>` + 
+  statlist.innerHTML = `<li> szavak: ${res.szavakSzama} </li>` + 
     `<li> karakterek: ${res.kar} </li>` + 
     `<li> sorok: ${res.sorok} </li>`
+
+  let szoszam = Number.parseInt($("#szoszam").value)
+
+  kiir(res, szoszam)
 }
 
 //
