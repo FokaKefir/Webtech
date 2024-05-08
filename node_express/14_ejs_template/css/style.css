@@ -1,0 +1,92 @@
+body {
+    margin: 0px; padding: 0px; border: 0px;
+}
+
+p, h1, h2, h6 {
+    padding: 0.5em; margin: 0.5em;
+}
+
+* {
+    font-family: Verdana, sans-serif;
+}
+
+#page {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;    
+    width: 80%;
+    min-height: 100vh;
+    margin-left: auto; margin-right: auto;
+}
+
+.header {
+    background-color: bisque;
+}
+
+.header h1 {
+    text-align: center;
+}
+
+.footer {
+    background-color: burlywood;
+
+}
+.footer h6 {
+    text-align: center;
+}
+/* ez flexbox és flex elem is */
+#content {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: aquamarine;
+    flex: 1 1 0;
+}
+
+.nav {
+    background-color: lightgray;
+    box-sizing: border-box;
+    flex: 1 0 20%;
+}
+
+.article {
+    background-color: lightcyan;
+    box-sizing: border-box;
+    flex: 0 0 60%; 
+}
+
+.aside {
+    background-color: lightgreen;
+    box-sizing: border-box;
+    flex: 0 1 20%;
+}
+
+/* menü */
+
+ul#menu{
+    list-style-type: none;
+    width: 80%;
+}
+
+#menu li {
+    /* display: inline; */
+    margin: 1em;
+    font-size: 12pt;
+    font-family: Verdana, Arial, sans-serif;
+}
+ul#menu li a {
+    text-decoration: none;
+    background-color: #808000;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #FFFACD;
+}
+ul#menu li a:link {
+    background-color: #F0E68C;
+    color: #556B2F;
+}
+ul#menu li a:visited {
+    background-color: #FFA500;
+}
+ul#menu li a:hover {
+    background-color: #FF0000;
+}

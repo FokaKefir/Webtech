@@ -1,0 +1,85 @@
+allgood.txt:All Good People 	
+apocalipse.txt:Apocalypse
+cordoflife.txt:Cord Of Life
+empty.txt:
+hearing.txt:Wanderous Stories 	
+igetup.txt:III. I Get Up, I Get Down
+lifeseeker.txt:Life Seeker 	
+longdistance.txt:Long Distance Rounaround 	
+roundabout.txt:Roundabout 	
+seasonsofmen.txt:IV. Seasons Of Man
+solidtime.txt:I.  The Solid Time Of Change
+soon.txt:Soon 	
+squire.txt:
+survival.txt:Survival  	
+timeanda.txt:Time And A Word 	
+totalmass.txt:II. Total Mass Retain
+wurm.txt:Wurm 	
+allgood.txt:All Good People 	
+apocalipse.txt:Apocalypse
+cordoflife.txt:Cord Of Life
+empty.txt:
+hearing.txt:Wanderous Stories 	
+igetup.txt:III. I Get Up, I Get Down
+lifeseeker.txt:Life Seeker 	
+longdistance.txt:Long Distance Rounaround 	
+roundabout.txt:Roundabout 	
+seasonsofmen.txt:IV. Seasons Of Man
+solidtime.txt:I.  The Solid Time Of Change
+soon.txt:Soon 	
+squire.txt:
+survival.txt:Survival  	
+timeanda.txt:Time And A Word 	
+totalmass.txt:II. Total Mass Retain
+wurm.txt:Wurm 	
+allgood.txt:All Good People 	
+apocalipse.txt:Apocalypse
+cordoflife.txt:Cord Of Life
+empty.txt:
+hearing.txt:Wanderous Stories 	
+igetup.txt:III. I Get Up, I Get Down
+lifeseeker.txt:Life Seeker 	
+longdistance.txt:Long Distance Rounaround 	
+roundabout.txt:Roundabout 	
+seasonsofmen.txt:IV. Seasons Of Man
+solidtime.txt:I.  The Solid Time Of Change
+soon.txt:Soon 	
+squire.txt:
+survival.txt:Survival  	
+timeanda.txt:Time And A Word 	
+totalmass.txt:II. Total Mass Retain
+wurm.txt:Wurm 	
+allgood.txt:All Good People 	
+apocalipse.txt:Apocalypse
+cordoflife.txt:Cord Of Life
+empty.txt:
+hearing.txt:Wanderous Stories 	
+igetup.txt:III. I Get Up, I Get Down
+lifeseeker.txt:Life Seeker 	
+longdistance.txt:Long Distance Rounaround 	
+roundabout.txt:Roundabout 	
+seasonsofmen.txt:IV. Seasons Of Man
+solidtime.txt:I.  The Solid Time Of Change
+soon.txt:Soon 	
+squire.txt:
+survival.txt:Survival  	
+timeanda.txt:Time And A Word 	
+totalmass.txt:II. Total Mass Retain
+wurm.txt:Wurm 	
+allgood.txt:All Good People 	
+apocalipse.txt:Apocalypse
+cordoflife.txt:Cord Of Life
+empty.txt:
+hearing.txt:Wanderous Stories 	
+igetup.txt:III. I Get Up, I Get Down
+lifeseeker.txt:Life Seeker 	
+longdistance.txt:Long Distance Rounaround 	
+roundabout.txt:Roundabout 	
+seasonsofmen.txt:IV. Seasons Of Man
+solidtime.txt:I.  The Solid Time Of Change
+soon.txt:Soon 	
+squire.txt:
+survival.txt:Survival  	
+timeanda.txt:Time And A Word 	
+totalmass.txt:II. Total Mass Retain
+wurm.txt:Wurm 	

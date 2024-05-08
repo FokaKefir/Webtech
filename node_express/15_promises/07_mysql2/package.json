@@ -1,0 +1,17 @@
+{
+  "name": "01_mysql2",
+  "version": "1.0.0",
+  "description": "Mysql2 példák",
+  "main": "teszt1_callback.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sz.L.",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "mime": "^3.0.0",
+    "mysql2": "^3.2.4",
+    "path": "^0.12.7"
+  }
+}

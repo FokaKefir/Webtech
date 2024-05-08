@@ -1,0 +1,34 @@
+<h1>Kiválasztott lista</h1>
+
+<table id="tab">
+  <tr>
+    <th>Sorszám</th>
+    <th>Szerző</th>
+    <th>Cím</th>
+    <th>Kiadó</th>
+    <th>Kiadás ideje</th>
+    <th>Ár</th>
+    <th>Szerkesztés</th>
+    <th>Törlés</th>
+  </tr>
+  <% for (const konyv of lista) {%>
+  <tr>
+    <td><%= ++start %></td>
+    <td><%= konyv.author %></td>
+    <!-- a cím mezőn lesz egy link is, ami behívhatja  a könyv részletes adatait -->
+    <td><a href="/books/view/<%= konyv.isbn %>"><%= konyv.title %></a></td>
+    <td><%= konyv.pub_name %></td>
+    <td><%= konyv.pub_date.toLocaleDateString('hu') %></td>
+    <td><%= konyv.price %> RON</td>
+    <td><a href="/books/edit/<%= konyv.isbn %>">Szerkeszt</a></td>
+    <td><a href="/books/delete/<%= konyv.isbn %>">Töröl</a></td>
+  </tr>
+  <%}%>
+</table>
+
+<div id="browse">
+  <span><a href="/books/list/<%= browse.first %>">Első</a></span>
+  <span><a href="/books/list/<%= browse.back %>">&lt;&lt;&lt;</a></span>
+  <span><a href="/books/list/<%= browse.forward %>">&gt;&gt;&gt;</a></span>
+  <span><a href="/books/list/<%= browse.last %>">Utolsó</a></span>
+</div>

@@ -1,0 +1,131 @@
+<!-- 
+  változók:
+  doer: 'insert' vagy 'update'
+  error  '' vagy nem üres ha hiba van
+  book a könyv adatai
+  cim a lap címe
+  menu az aktuális menü
+
+  három hívás lehetséges:
+    - Új könyv
+    - form visszaküldése hibával
+    - könyv módosítás
+
+-->
+
+<% if (doer=='insert') { %>
+  <p>Új könyv</p>
+<%}else{%>
+  <p>Könyv adatainak módosítása</p>
+<%}%>
+
+<!-- a hiba kiírások ide kerülnek ha error nem üres -->
+<% if (error) { %>
+<p class="error"><%= error %></p>
+<% } %> 
+ 
+<!-- űrlap insert vagy update esetre-->
+<% if (doer=='insert') { %>
+<form id="bookform" method="POST" action="<%= `/books/${doer}` %>" >
+  <%}else{%>
+  <form id="bookform" method="POST" action="<%= `/books/${doer}/${book.isbn}` %>" >
+<%}%>
+
+    <div class="container">
+      <label for="isbn" class="item"> ISBN: </label>
+
+      <input class="input item" type="text" id="isbn" name="isbn" size="13"
+      maxlength="13" <%= doer == "insert" ? "required" : "readonly" %>
+      value="<%= book.isbn %>" placeholder="ISBN13 szám" >
+
+      <label for="title" class="item"> Cím: </label>
+
+      <input
+        class="input item"
+        type="text"
+        id="title"
+        name="title"
+        size="30"
+        maxlength="250"
+        required
+        value="<%= book.title %>"
+        placeholder="maximum 255 karakter"
+      />
+
+      <label for="author" class="item">Szerző: </label>
+      <input
+        class="input item"
+        type="text"
+        id="author"
+        name="author"
+        size="30"
+        maxlength="250"
+        required
+        value="<%= book.author %>"
+        placeholder="maximum 255 karakter"
+      />
+
+      <label for="pages" class="item"> Oldalszám: </label>
+
+      <input
+        class="input item"
+        type="text"
+        id="pages"
+        name="pages"
+        size="5"
+        maxlength="5"
+        required
+        value="<%= book.pages %>"
+        pattern="\d+"
+        placeholder="mint: 125"
+      />
+
+      <label for="pub_name" class="item"> Kiadó: </label>
+
+      <input
+        class="input item"
+        type="text"
+        id="pub_name"
+        name="pub_name"
+        size="30"
+        maxlength="250"
+        required
+        value="<%= book.pub_name %>"
+        placeholder="maximum 80 karakter"
+      />
+
+      <label for="pub_date" class="item"> Kiadási időpont: </label>
+
+      <input
+        class="input item"
+        type="date"
+        id="pub_date"
+        name="pub_date"
+        size="30"
+        maxlength="250"
+        required
+        value="<%= book.pub_date %>"
+        placeholder="2023. 04. 22"
+      />
+      <label for="price" class="item"> Ár (RON): </label>
+
+      <input
+         class="input item"
+        type="text"
+        id="price"
+        name="price"
+        size="10"
+        maxlength="10"
+        required
+        value="<%= book.price %>"
+        pattern="\d+(\.(\d+)?)?"
+        placeholder="mint: 100.50"
+      />
+
+      <span id="butt">
+        <input type="reset" name="reset" value="Törlés" />
+        <input type="submit" name="go" value="Mehet" />
+      </span>
+    </div> <!--container-->
+  </form>
+</form>

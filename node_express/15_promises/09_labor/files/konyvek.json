@@ -1,0 +1,402 @@
+[
+  {
+    "isbn": "9789737953766",
+    "author": "Ágoston Katalin, Domokos József, Márton Lőrinc",
+    "title": "Érzékelők és jelátalakítók",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2007-02-01",
+    "price": 15.58
+  },
+  {
+    "isbn": "9789731970066",
+    "author": "Tőkés Gyöngyvér",
+    "title": "Szakma vagy hivatás? ",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2008-07-25",
+    "price": 32.3
+  },
+  {
+    "isbn": "9789738598546",
+    "author": "Nagy László (szerk.)",
+    "title": "Tanulmányok a természettudományok tárgyköréből",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2002-01-01",
+    "price": 13
+  },
+  {
+    "isbn": "9789737953612",
+    "author": "Oláh-Gál Róbert",
+    "title": "Az informatika alapjai közgazdász- és mérnökhallgatóknak",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2007-01-01",
+    "price": 15.58
+  },
+  {
+    "isbn": "9789737953797",
+    "author": "Józon Mónika",
+    "title": "Általános jogelméleti és polgári jogi ismeretek",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2007-01-30",
+    "price": 36.72
+  },
+  {
+    "isbn": "9789737953834",
+    "author": "Kakucs András",
+    "title": "Áramlástan",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2007-10-01",
+    "price": 34.64
+  },
+  {
+    "isbn": "9789737953827",
+    "author": "Szilágyi Györgyi, Flóra Gábor, Ari Gyula",
+    "title": "Bihar megye gazdasági-társadalmi fejlődése",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2007-11-01",
+    "price": 38.48
+  },
+  {
+    "isbn": "9789737953803",
+    "author": "Majdik Kornélia, Tonk Szende-Ágnes",
+    "title": "Biokémiai alkalmazások",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2007-06-01",
+    "price": 19.46
+  },
+  {
+    "isbn": "9789737953902",
+    "author": "Urák István",
+    "title": "Date despre arahnofauna din bazinul superior al Oltului",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2008-01-01",
+    "price": 28.78
+  },
+  {
+    "isbn": "9789737953759",
+    "author": "Csapó János, Csapóné Kiss Zsuzsanna, Albert Csilla",
+    "title": "Élelmiszer-fehérjék minősítése",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2007-02-01",
+    "price": 50.75
+  },
+  {
+    "isbn": "9789737953711",
+    "author": "Puskás Attila",
+    "title": "Idült vénás betegségek",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2007-02-01",
+    "price": 62.97
+  },
+  {
+    "isbn": "9789731970004",
+    "author": "Zsigmond István",
+    "title": "Metakognitív stratégiák - Összetevőik és mérésük",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2008-07-25",
+    "price": 24.56
+  },
+  {
+    "isbn": "9789737953889",
+    "author": "Elek Sándor (szerk.)",
+    "title": "Agrárpolitika--vidékfejlesztés",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2007-10-01",
+    "price": 17.55
+  },
+  {
+    "isbn": "9789737953919",
+    "author": "Zsigmond Andrea",
+    "title": "Minőségi és mennyiségi analitikai kémia laborkönyv",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2008-06-13",
+    "price": 19.1
+  },
+  {
+    "isbn": "9789737953926",
+    "author": "Dimény Gábor",
+    "title": "Minőségirányítási rendszerek",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2008-06-12",
+    "price": 23.7
+  },
+  {
+    "isbn": "9789737953896",
+    "author": "Ozsváth Imola (szerk.)",
+    "title": "Néptanítók. Életpályák és élettörténetek",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2008-03-01",
+    "price": 49.75
+  },
+  {
+    "isbn": "9789737953858",
+    "author": "Dósa Zoltán",
+    "title": "Tanulás, emlékezés, képzelet",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2007-06-01",
+    "price": 23
+  },
+  {
+    "isbn": "9789737953865",
+    "author": "Györfi Jenő, András Szilárd",
+    "title": "Valószínűségszámítás és lineáris programozás. A játékelmélet alapjai",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2007-11-01",
+    "price": 17.34
+  },
+  {
+    "isbn": "9789737953704",
+    "author": "Németi János, Molnár Zsolt",
+    "title": "A tell telepek fejlődése és vége a Nagykárolyi-síkságon és az Ér völgyében",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2007-01-01",
+    "price": 42.5
+  },
+  {
+    "isbn": "9789737953780",
+    "author": "Kakucs András",
+    "title": "A végeselem-módszer alapjai",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2007-06-01",
+    "price": 26.47
+  },
+  {
+    "isbn": "9789737953728",
+    "author": "Tamási Zsolt-József",
+    "title": "Az erdélyi római katolikus egyházmegye az 1848-49-es forradalomban",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2007-01-01",
+    "price": 55.9
+  },
+  {
+    "isbn": "9789738542235",
+    "author": "Vorzsák Magdolna - Kovács Liciniu Alexandru",
+    "title": "Mikroökonómiai kislexikon",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2002-01-01",
+    "price": 8
+  },
+  {
+    "isbn": "9789738542273",
+    "author": "Bege Antal-Demeter Albert-Lukács Andor",
+    "title": "Számelméleti feladatgyűjtemény",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2002-01-01",
+    "price": 9
+  },
+  {
+    "isbn": "9789731970028",
+    "author": "Márton Gyöngyvér",
+    "title": "Kriptográfiai alapismeretek",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2008-07-25",
+    "price": 22.7
+  },
+  {
+    "isbn": "9789738575080",
+    "author": "Salat Levente (szerk.)",
+    "title": "Kínlódni ebben az országban...?",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2002-01-01",
+    "price": 14
+  },
+  {
+    "isbn": "9789731970103",
+    "author": "Makó Zoltán, Lázár Ede, Máté Szilárd",
+    "title": "Előrejelző módszerek gazdasági és műszaki alkalmazásai",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2009-04-06",
+    "price": 11
+  },
+  {
+    "isbn": "9789737953988",
+    "author": "Szabó Árpád",
+    "title": "A tulajdonváltás folyamata Románia gazdasági átalakulásában",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2008-07-18",
+    "price": 31.35
+  },
+  {
+    "isbn": "9789731970165",
+    "author": "Pál László, Máté Szilárd",
+    "title": "Alkalmazásfejlesztés Delphiben",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2009-12-10",
+    "price": 15
+  },
+  {
+    "isbn": "9789731970233",
+    "author": "Lázár Ede",
+    "title": "Kutatásmódszertan a gyakorlatban az SPSS program használatával",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2009-12-10",
+    "price": 12
+  },
+  {
+    "isbn": "9789738542242",
+    "author": "Egyed Emese (szerk.)",
+    "title": "Theátrumi könyvecske",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2002-01-01",
+    "price": 10
+  },
+  {
+    "isbn": "9789738542228",
+    "author": "Nagy László",
+    "title": "Numerikus és közelítő módszerek az atomfizikában",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2002-01-01",
+    "price": 9
+  },
+  {
+    "isbn": "9789738575028",
+    "author": "Vofkori László",
+    "title": "Gazdasági földrajz",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2002-01-01",
+    "price": 12
+  },
+  {
+    "isbn": "9789738575097",
+    "author": "Gábor Csilla, Selyem Zsuzsa (szerk.)",
+    "title": "Kegyesség, kultusz, távolítás",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2002-01-01",
+    "price": 13
+  },
+  {
+    "isbn": "9789738575066",
+    "author": "Tőkés Béla, Donáth-Nagy Gabriella",
+    "title": "Kémiai előadások és laboratóriumi gyakorlatok",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2002-01-01",
+    "price": 15
+  },
+  {
+    "isbn": "9789731970295",
+    "author": "Papp István",
+    "title": "Mechanizmusok elmélete",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2010-01-03",
+    "price": 17
+  },
+  {
+    "isbn": "9789731970141",
+    "author": "Kovács D. Lehel István",
+    "title": "Számítógépes grafika",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2009-12-12",
+    "price": 35
+  },
+  {
+    "isbn": "9789737953940",
+    "author": "Csapó János",
+    "title": "Élelmiszer-analitika",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2008-06-05",
+    "price": 49.9
+  },
+  {
+    "isbn": "9789731970202",
+    "author": "Szilágyi László",
+    "title": "Novel image processing methods based on fuzzy logic",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2009-12-12",
+    "price": 14
+  },
+  {
+    "isbn": "9789738575035",
+    "author": "Irimiaş Gheorghe",
+    "title": "Noţiuni de fonetică şi fonologie",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2002-01-01",
+    "price": 8
+  },
+  {
+    "isbn": "9789738598508",
+    "author": "Szilágyi József, Mészáros Sándor",
+    "title": "Mezőgazdasági termékek áruismerete",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2002-01-01",
+    "price": 16
+  },
+  {
+    "isbn": "9789738575011",
+    "author": "Sorbán Angella (szerk.)",
+    "title": "Szociológiai tanulmányok erdélyi fiatalokról",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2002-01-01",
+    "price": 20
+  },
+  {
+    "isbn": "9789738598591",
+    "author": "Kiss István",
+    "title": "Az erodált talajok enzimológiája",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2003-01-01",
+    "price": 15
+  },
+  {
+    "isbn": "9789738598560",
+    "author": "Albert-Lőrincz Enikő (szerk.)",
+    "title": "Fekete éden",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2003-01-01",
+    "price": 16
+  },
+  {
+    "isbn": "9789738598522",
+    "author": "Németi János, Molnár Zsolt",
+    "title": "A tell telepek elterjedése a Nagykárolyi-síkságon és az Ér völgyében",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2002-01-01",
+    "price": 15
+  },
+  {
+    "isbn": "9789737953063",
+    "author": "Balázs Lajos",
+    "title": "Folclor. Noţiuni generale de folclor şi poetică populară",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2003-01-01",
+    "price": 8
+  },
+  {
+    "isbn": "9789738598553",
+    "author": "Bocskay István, Matekovits György, Székely Melinda, Kovács-Kuruc J. Szabolcs",
+    "title": "Magyar-román-angol fogorvosi szakszótár",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2003-01-01",
+    "price": 25
+  },
+  {
+    "isbn": "9789738598577",
+    "author": "Brassai Attila (szerk.)",
+    "title": "Orvostudományi tanulmányok",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2003-01-01",
+    "price": 16
+  },
+  {
+    "isbn": "9789737953056",
+    "author": "Ujvárosi Lujza (szerk.)",
+    "title": "Erdély folyóinak természeti állapota",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2003-01-01",
+    "price": 15
+  },
+  {
+    "isbn": "9789737953049",
+    "author": "Varga Attila",
+    "title": "Alkotmányjogi és államszervezési alapismeretek",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2002-01-01",
+    "price": 16
+  },
+  {
+    "isbn": "9789738575042",
+    "author": "Nagy Imola Katalin",
+    "title": "A Practical Course in English",
+    "pub_name": "Scientia Kiadó, Kolozsvár",
+    "pub_date": "2002-01-01",
+    "price": 15
+  }
+]

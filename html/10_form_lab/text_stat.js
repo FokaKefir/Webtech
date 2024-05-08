@@ -83,4 +83,5 @@ window.onload = function () {
   // keyup vagy change a textarea-ra, ekkor változik a szöveg
   // change: a stopszó jelölőnégyzetre
   $("#stat").addEventListener("click", calcStat, false);
+  $("#message").addEventListener("keyup", calcStat, false);
 };

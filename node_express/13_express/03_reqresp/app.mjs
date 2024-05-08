@@ -31,6 +31,14 @@ app.post('/form', (req, res) => {
 //a / relatív URL-re akkor válaszol ha GET kérést kap
 
 app.get('/elso', (req, res) => {
+  console.log({
+    url: req.url,
+    method: req.method,
+    ip: req.ip,
+    hostname: req.hostname,
+    path: req.path
+  })
+  console.log(req.query)
   res.send("Első");
 });
 

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8" />
+    <title>Egy könyv</title>
+    <style>
+      #tab {
+        border-collapse: collapse;
+      }
+      #tab,
+      td,
+      th {
+        border: 1px solid brown;
+        padding: 0.3em;
+      }
+      #tab td {
+        vertical-align: middle;
+      }
+      #tab th {
+        text-align: center;
+        background-color: khaki;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Egy könyv adatai</h1>
+    <table id="tab">
+      <tr>
+        <th>Szerző</th>
+        <th>Cím</th>
+        <th>Kiadó</th>
+        <th>Kiadás ideje</th>
+        <th>Ár</th>
+      </tr>
+      <tr>
+        <td><%= book.author %></td>
+        <td><%= book.title %></td>
+        <td><%= book.pub_name %></td>
+        <td><%= book.pub_date %></td>
+        <td><%= book.price %> RON</td>
+      </tr>
+    </table>
+  <p>... itt kiírnánk a részletes adatokat, mint tartalom, borítókép, stb.</p>
+  </body>
+</html>
+
+<!--
+    egy sor:
+
+    isbn: '9789738575042',
+    author: 'Nagy Imola Katalin',
+    title: 'A Practical Course in English',
+    pub_name: 'Scientia Kiadó, Kolozsvár',
+    pub_date: '2002-01-01',
+    price: 15
+-->

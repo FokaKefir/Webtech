@@ -1,0 +1,174 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+p,
+h1,
+h2,
+h6 {
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+* {
+  font-family: Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 18pt;
+}
+
+#page {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+}
+
+.header {
+  background-color: bisque;
+  flex: 0 0 auto;
+}
+
+.header h1 {
+  text-align: center;
+}
+
+.footer {
+  background-color: burlywood;
+}
+.footer h6 {
+  text-align: center;
+}
+
+div#content {
+  background-color: lightgray;
+  padding: 2em;
+  flex-grow: 2;
+}
+
+.nav {
+  box-sizing: border-box;
+}
+
+.article {
+  box-sizing: border-box;
+}
+
+/* menü */
+
+ul#menu {
+  list-style-type: none;
+  width: 80%;
+}
+
+#menu li {
+  display: inline;
+  margin: 0.5em;
+  font-size: 12pt;
+  font-family: Verdana, Arial, sans-serif;
+}
+ul#menu li a {
+  text-decoration: none;
+  background-color: #808000;
+  padding: 0.3em;
+  color: black;
+}
+ul#menu li a:link {
+  background-color: #f0e68c;
+  color: #556b2f;
+}
+ul#menu li a:visited {
+  background-color: #ffa500;
+}
+ul#menu li a:hover {
+  background-color: #ff0000;
+}
+
+/* table */
+
+#tab {
+  border-collapse: collapse;
+}
+
+#tab,
+td,
+th {
+  border: 1px solid brown;
+  padding: 0.3em;
+}
+
+#tab td {
+  vertical-align: middle;
+}
+
+#tab th {
+  text-align: center;
+  background-color: bisque;
+}
+
+/*browse */
+
+#browse {
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+
+#browse a {
+  text-decoration: none;
+  padding: 0.5em;
+  background-color: bisque;
+}
+
+/* form */
+.container {
+  display: flex;
+  flex-wrap: wrap ;   
+  border: 1px solid black;
+  width: 35em;
+  padding: 1em;
+  background-color: lightgray;
+  border-radius: 10px;
+}
+/* egy doboz alap mérete */  
+#bookform .item {
+  box-sizing: border-box;
+  width: 50%;
+  padding: 0.5em;
+}
+
+#bookform input {
+  align-self: center;
+  flex-grow: 1;
+}
+
+#bookform #butt{
+  box-sizing: border-box;
+  width: 50%;
+  padding: 0.5em;
+  text-align: left;
+}    
+
+#bookform #err{
+  box-sizing: border-box;
+  width: 50%;
+  padding: 0.5em;
+  text-align: right;
+  color: red;
+}    
+
+#bookform button {
+  width: 20%;
+}
+
+.error {
+  color: red;
+}
+

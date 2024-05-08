@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<!-- űrlap elemeink elhelyezése egymás alá -->
+<head>
+    <title>Űrlap ejs példa</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        body {
+            margin: 0px; padding: 0px; 
+        }
+        p {
+            padding: 2px; margin: 4px;
+            font-size: smaller;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap ;   
+            border: 1px solid black;
+            width: 35em;
+            padding: 1em;
+            background-color: lightgray;
+            border-radius: 0.5em;
+        }
+       /* egy doboz alap mérete */  
+        .item {
+            box-sizing: border-box;
+            width: 50%;
+            padding: 0.5em;
+        }
+
+        input {
+            align-self: center;
+            flex-grow: 1;
+        }
+
+        label.item { 
+            text-align: right;
+        }
+
+        input[type=submit] {
+            width: 20%;
+            flex-grow: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <% if (method==="GET") { %>
+        <%- include('form_get', {cim: "Kiküldött űrlap ha a kérés GET"}); %>
+    <% }else{ %>
+        <%- include('form_post', {cim: "Fogadott űrlap feldolgozva ha a kérés POST"}); %>
+    <% } %>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8">
+    <title><%= cim %></title>
+<style>
+    #menu li {
+    display: inline;
+    margin: 2px;
+    font-size: 12pt;
+    font-family: Verdana, Arial, sans-serif;
+    width: 5em;
+}
+ul#menu li a {
+    text-decoration: none;
+    background-color: #808000;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #FFFACD;
+}
+ul#menu li a:link {
+    background-color: #F0E68C;
+    color: #556B2F;
+}
+ul#menu li a:visited {
+    background-color: #FFA500;
+}
+ul#menu li a:hover {
+    background-color: #FF0000;
+}
+</style>
+</head>
+<body>
+    <ul id="menu">
+        <% for (let prop in menu) { %> 
+            <li><a href="<%= menu[prop] %>"><%= prop %></a></li>
+        <% } %>
+    </ul>
+</body>
+</html>

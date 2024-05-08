@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8" />
+    <title><%= cim %></title>
+    <style>
+      #tab {
+        border-collapse: collapse;
+      }
+      #tab,
+      td,
+      th {
+        border: 1px solid brown;
+        padding: 0.3em;
+      }
+      #tab td {
+        vertical-align: middle;
+      }
+      #tab th {
+        text-align: center;
+        background-color: khaki;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="tab">
+        <tr>
+            <th>Szerző</th>
+            <th><Cím</th>
+            <th>Kiadó</th>
+            <th>Kiadás ideje</th>
+            <th>Ár</th>
+        </tr>
+        <% for (const konyv of lista) {%>
+            <tr>
+                <td><%= konyv.author %></td>
+                <!-- a cím mezőn lesz egy link is, ami behívhatja  a könyv részletes adatait -->
+                <td><a href="/book/<%= konyv.isbn %>"><%= konyv.title %></a></td>
+                <td><%= konyv.pub_name %></td>
+                <td><%= konyv.pub_date %></td>
+                <td><%= konyv.price %> RON</td>
+            </tr>
+        <%}%>}
+    </table>
+  </body>
+</html>
+
+<!--
+    egy sor:
+
+    isbn: '9789738575042',
+    author: 'Nagy Imola Katalin',
+    title: 'A Practical Course in English',
+    pub_name: 'Scientia Kiadó, Kolozsvár',
+    pub_date: '2002-01-01',
+    price: 15
+-->
