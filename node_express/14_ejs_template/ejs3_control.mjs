@@ -67,6 +67,31 @@ app.use('/book/:isbn', (req, res)=> {
   }
 });
 
+app.get('/table/:N/:M', (req, res) => {
+  const N = parseInt(req.params.N);
+  const M = parseInt(req.params.M);
+  const numbersNeeded = N * M;
+  try {
+    const data = readFileSync('./adatok/szamok.txt', {encoding: 'utf-8'});
+
+    const numbers = data.split(/\s+/).map(Number);
+    if (numbers.length < numbersNeeded) {
+      res.send("Tul nagy a tablazat");
+    } else {
+      const tableData = [];
+      for (let i = 0; i < N; i++) {
+        const row = numbers.slice(i * M, (i + 1) * M);
+        tableData.push(row);
+      }
+      res.render('table1', {rows: tableData});
+    }
+
+  } catch (err) {
+    console.error("File read error: ", err);
+    res.status(500).send("Hiba a file beolvasasa kozben");
+  }
+})
+
 //ha az előző címeket nem hívtuk meg ez fut le
 app.use("/", (req, res) => {
   res.render('para', {cim: "EJS sablonok", tartalom: "Különböző szerkezetek használata sablonokban"});

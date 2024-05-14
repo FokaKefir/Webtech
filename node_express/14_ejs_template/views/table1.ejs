@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8" />
+    <title>Faszom</title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <table>
+      <% rows.forEach(function(row) { %>
+        <tr>
+          <% row.forEach(function(num) { %>
+            <td><%= num%></td>>
+          <% }); %>
+        </tr>
+      <% }); %>
+    </table>
+  </body>
+</html>
+
