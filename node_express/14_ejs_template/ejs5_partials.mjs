@@ -4,6 +4,7 @@ import express from 'express';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 import http from 'http';
+import hirek from './hirek.mjs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -24,8 +25,25 @@ const menu = {
   Ötödik : 'http://localhost:3000'
 };
 
+app.get('/hirek/:n', (req, res) => {
+    const n = parseInt(req.params.n, 10);
+    res.render('index', {
+        cim: 'EJS sablonok',
+        tartalom: 'EJS partials pelda',
+        menu: menu,
+        hirek: hirek.items.slice(0, n)
+
+    });
+    console.log(hirek.items.slice(0, 3));
+});
+
 app.use("/", (req, res) => {
-  res.render('index', {cim: "EJS sablonok", tartalom: "EJS partials példa", menu: menu});
+  res.render('index', {
+    cim: "EJS sablonok", 
+    tartalom: "EJS partials példa", 
+    menu: menu,
+    hirek: hirek.items.slice(0, 3)
+  });
 });
 
 const server = http.createServer(app);

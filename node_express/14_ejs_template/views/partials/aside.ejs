@@ -1,4 +1,13 @@
 
-  <aside class="aside">
-  <p>aside tartalom</p>
-  </aside>
+<aside class="aside">
+<p>aside tartalom</p>
+
+
+<% hirek.forEach(hir => { %>
+  <div class="hir-doboz">
+    <h2> <a href="<%= hir.url%>"><%= hir.title %></a> - <%= hir.date %> </h2>
+    <p><%= hir.description %></p>
+  </div>
+
+<% }) %>
+</aside>
