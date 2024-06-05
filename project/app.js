@@ -5,6 +5,9 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const User = require('./models/User'); 
 const Category = require('./models/Category'); 
+const multer = require('multer');
+const fs = require('fs');
+const { v4: uuidv4 } = require('uuid');
 require('dotenv').config();
 
 const app = express();
@@ -177,6 +180,89 @@ app.post('/order', (req, res) => {
     console.log(`User: ${userId} made an order for the article: ${articleId}`)
 
     res.redirect('/dashboard');
+});
+
+
+// Set up multer for file uploads
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, 'uploads/');
+    },
+    filename: function (req, file, cb) {
+        const originalname = file.originalname;
+        const ext = path.extname(originalname);
+        const uniqueFilename = `${uuidv4()}${ext}`;
+        cb(null, uniqueFilename);
+    }
+});
+
+const upload = multer({ storage: storage });
+
+app.get('/receipts', async (req, res) => {
+    if (!req.session.userId) {
+        return res.redirect('/login');
+    }
+
+    if (req.session.userRole !== 'admin') {
+        return res.redirect('/dashboard');
+    }
+
+    try {
+        // Fetch list of files from the uploads directory
+        const uploadDirectory = path.join(__dirname, 'uploads');
+        const files = await fs.promises.readdir(uploadDirectory);
+
+        // Render the receipts page with the list of files
+        res.render('receipts', { files });
+    } catch (error) {
+        console.error('Error fetching files:', error);
+        res.status(500).send('Error fetching files.');
+    }
+});
+
+app.post('/upload', upload.single('file'), (req, res) => {
+    if (!req.session.userId) {
+        return res.redirect('/login');
+    }
+
+    if (!req.file) {
+        return res.status(400).send('No file uploaded.');
+    }
+    
+    res.status(200).send('File uploaded successfully.');
+});
+
+app.get('/receipts/list', (req, res) => {
+    if (!req.session.userId) {
+        return res.redirect('/login');
+    }
+
+    const uploadDirectory = path.join(__dirname, 'uploads');
+
+    fs.readdir(uploadDirectory, (err, files) => {
+        if (err) {
+            console.error('Error listing files:', err);
+            return res.status(500).send('Error listing files.');
+        }
+
+        res.render('receipts', { files });
+    });
+});
+
+app.get('/receipts/download/:filename', (req, res) => {
+    if (!req.session.userId) {
+        return res.redirect('/login');
+    }
+
+    const { filename } = req.params;
+    const filePath = path.join(__dirname, 'uploads', filename);
+
+    res.download(filePath, (err) => {
+        if (err) {
+            console.error('Error downloading file:', err);
+            return res.status(500).send('Error downloading file.');
+        }
+    });
 });
 
 
