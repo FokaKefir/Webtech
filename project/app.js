@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const bodyParser = require('body-parser');
 const path = require('path');
+const User = require('./models/User'); 
+const Category = require('./models/Category'); 
 require('dotenv').config();
 
 const app = express();
@@ -11,17 +13,11 @@ const app = express();
 mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+}).then(() => {
+    console.log('Connected to MongoDB');
+}).catch(err => {
+    console.error('Error connecting to MongoDB', err);
 });
-
-// Define User schema and model
-const userSchema = new mongoose.Schema({
-    username: { type: String, unique: true, required: true },
-    email: { type: String, unique: true, required: true },
-    password: { type: String, required: true },
-    role: { type: String, default: 'user' },
-});
-
-const User = mongoose.model('User', userSchema);
 
 // Middleware setup
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -91,15 +87,6 @@ app.post('/login', async (req, res) => {
     res.redirect('/dashboard');
 });
 
-app.get('/dashboard', (req, res) => {
-    if (!req.session.userId) {
-        return res.redirect('/login');
-    }
-
-    // Render the dashboard with the user's role
-    res.render('dashboard', { userRole: req.session.userRole });
-});
-
 app.get('/logout', (req, res) => {
     req.session.destroy((err) => {
         if (err) {
@@ -110,6 +97,88 @@ app.get('/logout', (req, res) => {
         res.redirect('/login');
     });
 });
+
+app.get('/dashboard', async (req, res) => {
+    if (!req.session.userId) {
+        return res.redirect('/login');
+    }
+
+    try {
+        // Fetch categories from the database
+        let categories = await Category.find({});
+        const allCategories = categories;
+        
+        // Get the selected category from the request query
+        const selectedCategory = req.query.category;
+
+        if (selectedCategory) {
+            categories = await Category.find({ name: `${selectedCategory}` }, {});
+        } 
+
+        // Render the dashboard with the user's role, categories, and filtered articles
+        res.render('dashboard', { userRole: req.session.userRole, categories, selectedCategory, allCategories });
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        res.send('Error fetching data.');
+    }
+});
+
+// Increase quantity route
+app.post('/increase-quantity', async (req, res) => {
+    if (!req.session.userId) {
+        return res.redirect('/login');
+    }
+
+    const { articleId } = req.body;
+
+    try {
+        await Category.updateOne(
+            { "subcategories.articles._id": articleId },
+            { $inc: { "subcategories.$[].articles.$[article].quantity": 1 } },
+            { arrayFilters: [{ "article._id": articleId }] }
+        );
+        res.redirect('/dashboard');
+    } catch (error) {
+        console.error('Error increasing quantity:', error);
+        res.send('Error increasing quantity.');
+    }
+});
+
+// Decrease quantity route
+app.post('/decrease-quantity', async (req, res) => {
+    if (!req.session.userId) {
+        return res.redirect('/login');
+    }
+
+    const { articleId } = req.body;
+
+    try {
+        await Category.updateOne(
+            { "subcategories.articles._id": articleId },
+            { $inc: { "subcategories.$[].articles.$[article].quantity": -1 } },
+            { arrayFilters: [{ "article._id": articleId }] }
+        );
+        res.redirect('/dashboard');
+    } catch (error) {
+        console.error('Error decreasing quantity:', error);
+        res.send('Error decreasing quantity.');
+    }
+});
+
+// Make an order
+app.post('/order', (req, res) => {
+    if (!req.session.userId) {
+        return res.redirect('/login');
+    }
+
+    const { articleId } = req.body;
+    const userId = req.session.userId;
+    
+    console.log(`User: ${userId} made an order for the article: ${articleId}`)
+
+    res.redirect('/dashboard');
+});
+
 
 app.listen(3000, () => {
     console.log('Server is running on port 3000');
