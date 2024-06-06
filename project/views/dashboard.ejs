@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <script>
+        function filterByCategory() {
+            const selectedCategory = document.getElementById('categoryFilter').value;
+            window.location.href = `/dashboard?category=${selectedCategory}`;
+        }
+    </script>
+</head>
+<body>
+    <h2>Dashboard</h2>
+    <p>Welcome, <%= userRole %></p>
+
+    <% if (userRole === 'admin') { %>
+        <button onclick="window.location.href='/receipts'">Receipts</button>
+    <% } %>
+
+    <!-- Dropdown menu for category filtering -->
+    <label for="categoryFilter">Filter by Category:</label>
+    <select id="categoryFilter" onchange="filterByCategory()">
+        <option value="">All Categories</option>
+        <% allCategories.forEach(category => { %>
+            <option value="<%= category.name %>" <%= selectedCategory === category.name ? 'selected' : '' %>><%= category.name %></option>
+        <% }) %>
+    </select>
+
+    
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Subcategory</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Discount</th>
+                <th>Quantity</th>
+                <% if (userRole === 'user') { %>
+                    <th>Order</th>
+                <% } else if (userRole === 'admin') { %>
+                    <th>Actions</th>
+                <% } %>
+            </tr>
+        </thead>
+        <tbody>
+            <% categories.forEach(category => { %>
+                <% category.subcategories.forEach(subcategory => { %>
+                    <% subcategory.articles.forEach(article => { %>
+                        <tr>
+                            <td><%= category.name %></td>
+                            <td><%= subcategory.name %></td>
+                            <td><%= article.name %></td>
+                            <td><%= article.price %></td>
+                            <td><%= article.discount %></td>
+                            <td><%= article.quantity %></td>
+                            <% if (userRole === 'admin') { %>
+                                <td>
+                                    <form action="/increase-quantity" method="post" style="display:inline;">
+                                        <input type="hidden" name="articleId" value="<%= article._id %>">
+                                        <button type="submit">+</button>
+                                    </form>
+                                    <form action="/decrease-quantity" method="post" style="display:inline;">
+                                        <input type="hidden" name="articleId" value="<%= article._id %>">
+                                        <button type="submit">-</button>
+                                    </form>
+                                    <form action="/delete-article" method="post" style="display:inline;">
+                                        <input type="hidden" name="articleId" value="<%= article._id %>">
+                                        <button type="submit">del</button>
+                                    </form>
+                                </td>
+                            <% } else if (userRole === 'user') { %>
+                                <td>
+                                    <form action="/order" method="post" style="display:inline;">
+                                        <input type="hidden" name="articleId" value="<%= article._id %>">
+                                        <button type="submit">Make an order</button>
+                                    </form>
+                                </td>
+                            <% } %>
+                        </tr>
+                    <% }) %>
+                <% }) %>
+            <% }) %>
+        </tbody>
+    </table>
+
+    <a href="/logout">Logout</a>
+</body>
+</html>

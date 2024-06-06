@@ -9,9 +9,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Environment variables
-.env
-
 # Cache
 .cache/
 
@@ -29,12 +26,6 @@ Thumbs.db
 # npm specific files
 package-lock.json
 yarn.lock
-
-# Public folder
-public/css/
-
-# Compiled EJS files
-views/*.ejs
 
 # Miscellaneous
 *.swp
