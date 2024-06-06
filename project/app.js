@@ -10,6 +10,8 @@ const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
 require('dotenv').config();
 
+const port = process.env.PORT || 3000;
+
 const app = express();
 
 // Connect to MongoDB using the URI from the .env file
