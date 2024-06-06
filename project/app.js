@@ -168,6 +168,26 @@ app.post('/decrease-quantity', async (req, res) => {
     }
 });
 
+// delete article
+app.post('/delete-article', async (req, res) => {
+    if (!req.session.userId) {
+        return res.redirect('/login');
+    }
+
+    const { articleId } = req.body;
+
+    try {
+        await Category.updateOne(
+            { 'subcategories.articles._id': articleId },
+            { $pull: { 'subcategories.$[].articles': { _id: articleId } } }
+        )
+        res.redirect('/dashboard');
+    } catch (error) {
+        console.error('Error deleting article:', error);
+        res.send('Error deleting article.');
+    }
+});
+
 // Make an order
 app.post('/order', (req, res) => {
     if (!req.session.userId) {
